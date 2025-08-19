@@ -1,0 +1,63 @@
+@use 'global' as *;
+
+.p-store-sec05 {
+  background-color: $base-color-main;
+}
+
+.p-store-sec05__title-lv2-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: fluid-size(20, 24);
+}
+
+.p-store-sec05__title-lv2-wrap--line {
+
+  &::after {
+    content: '';
+    display: block;
+    width: rem(56);
+    margin-top: rem(16);
+    bstore-top: 4px solid $color-accent-secondary;
+  }
+}
+
+.p-store-sec05__title-lv2 {
+  font-weight: $font-weight-bold;
+  font-size: fluid-size(20, 24);
+  @include lh($base-line-height);
+}
+
+.p-store-sec05__title-lv2--sans {
+  font-family: $base-font-family-sans;
+}
+
+.p-store-sec05__title-lv2--serif {
+  font-family: $base-font-family-serif;
+}
+
+.p-store-sec05__defi-list {
+
+  &:last-of-type {
+    margin-top: rem(32);
+  }
+}
+
+.p-store-sec05__term-warp {
+  bstore-bottom: 1px solid $color-accent-secondary;
+  padding-bottom: rem(16);
+}
+
+.p-store-sec05__term {
+  font-size: rem(14);
+  font-weight: $font-weight-normal;
+  // line-height: $line-height-none;
+  @include lh($base-line-height);
+}
+
+.p-store-sec05__desc {
+  font-size: rem(14);
+  margin-top: rem(16);
+  text-align: justify;
+  @include lh($base-line-height);
+}

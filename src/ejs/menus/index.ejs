@@ -1,0 +1,211 @@
+<%_ const path='../'; _%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- meta -->
+    <%- include(path + '_common/_head', { path:path,pageMeta:global.pageMeta['menus'],}) %>
+  </head>
+  <body class="l-body l-body--bg01">
+    <%- include(path + '_common/_header',{path:path,}) %>
+
+    <!-- main -->
+    <main class="l-main">
+
+      <div class="p-menus-mv js-mv-height">
+        <div class="p-menus-mv__title">
+
+      <!-- 下層ページのメインビュー -->
+      <%- include(path + '_component/_mv', {
+        path:path,
+        pageMeta:global.pageMeta['menus'],
+        modifier:'--horizontal'
+      }) %>
+
+      </div>
+    </div>
+
+    <div class="p-menus-nav l-menus-nav" id="a">
+      <div class="p-menus-nav__inner l-inner">
+        <ul class="p-menus-nav__list">
+          <li class="p-menus-nav__item"><a href="#osusume">旬のおすすめ</a></li>
+          <li class="p-menus-nav__item"><a href="#zanmai">三昧盛り</a></li>
+          <li class="p-menus-nav__item"><a href="#teiban">定番にぎり</a></li>
+          <li class="p-menus-nav__item"><a href="#makimono">巻物・軍艦</a></li>
+          <li class="p-menus-nav__item"><a href="#aburi">炙り・びっくり寿司</a></li>
+          <li class="p-menus-nav__item"><a href="#ippin">一品料理</a></li>
+          <li class="p-menus-nav__item"><a href="#drink">ドリンク・デザート</a></li>
+          <li class="p-menus-nav__item"><a href="#lunch">ランチメニュー</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="p-menus-takeout l-menus-takeout">
+      <div class="p-menus-takeout__inner l-inner">
+        <a href="<%= path %>takeout">
+          <p class="p-menus-takeout__content"><img width="688" height="160" loading="lazy" decoding="async" src="<%= path %>assets/images/bnr_takeout01.png" alt="お持ち帰りメニュー"></p>
+        </a>
+      </div>
+    </div>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="osusume">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--01 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">旬のおすすめ</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="zanmai">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--02 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">三昧盛り</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="teiban">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--03 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">定番にぎり</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="makimono">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--04 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">巻物・軍艦</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="aburi">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--05 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">炙り・びっくり寿司</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="ippin">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--06 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">一品料理</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="drink">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--07 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">ドリンク・デザート</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_menus-list-primary',{
+            path:path,
+            pageMeta:global.pageMeta['menus']
+          }) %>
+          <!-- ループ終了 -->
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-menus-sec p-menus-sec--secondary l-menus-sec" id="lunch">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--08 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">ランチメニュー</h2>
+        </div class="p-menus-sec__lead">
+        <div class="js-accordion-area">
+          <div class="p-menus-sec__lead-wrap">
+            <p class="p-menus-sec__lead">平日限定(AM11時～PM3時まで)の<br class="">ランチメニュー</p>
+          </div>
+          <ul class="p-menus-sec__list">
+
+            <!-- ループ処理開始 -->
+            <%- include(path + '_component/_menus-list-secondary',{
+              path:path,
+              pageMeta:global.pageMeta['menus']
+            }) %>
+            <!-- ループ終了 -->
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- パンくず -->
+    <%- include(path + '_component/_breadcrumb', {
+      path:path,
+      pageMeta:global.pageMeta['menus'],
+    }) %>
+
+    </main>
+    <!-- /main -->
+
+    <%- include(path + '_common/_footer',{path:path,}) %>
+  </body>
+</html>

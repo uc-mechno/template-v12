@@ -1,0 +1,21 @@
+@use 'global' as *;
+
+.p-initiatives-pr-area {
+  background-color: $base-color-main;
+}
+
+.p-initiatives-pr-area--bg01,
+.p-initiatives-pr-area--bg02 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('#{$pathImages}/common/bg12.png');
+  @include media(min, md) {
+    background-size: contain;
+  }
+}
+
+.webp .p-initiatives-pr-area--bg01,
+.webp .p-initiatives-pr-area--bg02 {
+  background-image: url('#{$pathImages}/common/bg12.png.webp');
+}

@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.p-sub-mv {
+  height: rem(190);
+  background-image: url("#{$pathImages}/common/sub-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media(min,md) {
+    height: rem(240);
+  }
+}
+
+.p-sub-mv__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: rem(94);
+}

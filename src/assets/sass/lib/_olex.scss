@@ -1,0 +1,31 @@
+@use 'sass:math';
+/// @link https://shibajuku.net/olex/
+
+// Gutter Size
+$gutters: (
+  'small': 1vw,
+  'normal': 2vw,
+  'large': 3vw,
+) !default;
+
+.olex {
+
+  &[data-gutter] {
+    width: auto;
+
+    & > .olex__item {
+      border: solid transparent;
+      background-clip: padding-box;
+    }
+  }
+
+  @each $size, $val in $gutters {
+    &[data-gutter='#{$size}'] {
+      margin: -(math.div($val, 2));
+
+      & > .olex__item {
+        border-width: math.div($val, 2);
+      }
+    }
+  }
+}

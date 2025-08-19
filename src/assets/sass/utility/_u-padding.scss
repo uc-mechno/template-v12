@@ -1,0 +1,131 @@
+@use "global/" as *;
+
+@for $value from 1 through 5 {
+  .u-pt#{$value * 8} {
+    padding-top: 8px * $value $important;
+  }
+
+  .u-pr#{$value * 8} {
+    padding-right: 8px * $value $important;
+  }
+
+  .u-pb#{$value * 8} {
+    padding-bottom: 8px * $value $important;
+  }
+
+  .u-pl#{$value * 8} {
+    padding-left: 8px * $value $important;
+  }
+
+
+  // @include media(min, sm) {
+  //   .u-sm-pt#{$value * 8} {
+  //     padding-top: 8px * $value $important;
+  //   }
+
+  //   .u-sm-pr#{$value * 8} {
+  //     padding-right: 8px * $value $important;
+  //   }
+
+  //   .u-sm-pb#{$value * 8} {
+  //     padding-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-sm-pl#{$value * 8} {
+  //     padding-left: 8px * $value $important;
+  //   }
+
+  // }
+
+  // @include media(min, md) {
+  //   .u-md-pt#{$value * 8} {
+  //     padding-top: 8px * $value $important;
+  //   }
+
+  //   .u-md-pr#{$value * 8} {
+  //     padding-right: 8px * $value $important;
+  //   }
+
+  //   .u-md-pb#{$value * 8} {
+  //     padding-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-md-pl#{$value * 8} {
+  //     padding-left: 8px * $value $important;
+  //   }
+
+  // }
+
+  // @include media(min, lg) {
+  //   .u-lg-pt#{$value * 8} {
+  //     padding-top: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pr#{$value * 8} {
+  //     padding-right: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pb#{$value * 8} {
+  //     padding-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pl#{$value * 8} {
+  //     padding-left: 8px * $value $important;
+  //   }
+
+  // }
+
+  // @include media(min, lg) {
+  //   .u-lg-pt#{$value * 8} {
+  //     padding-top: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pr#{$value * 8} {
+  //     padding-right: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pb#{$value * 8} {
+  //     padding-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-lg-pl#{$value * 8} {
+  //     padding-left: 8px * $value $important;
+  //   }
+
+  // }
+
+  // @include media(min, xl) {
+  //   .u-xl-pt#{$value * 8} {
+  //     padding-top: 8px * $value $important;
+  //   }
+
+  //   .u-xl-pr#{$value * 8} {
+  //     padding-right: 8px * $value $important;
+  //   }
+
+  //   .u-xl-pb#{$value * 8} {
+  //     padding-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-xl-pl#{$value * 8} {
+  //     padding-left: 8px * $value $important;
+  //   }
+  // }
+
+}
+
+.u-pt0 {
+  padding-top: 0 $important;
+}
+
+.u-pr0 {
+  padding-right: 0 $important;
+}
+
+.u-pb0 {
+  padding-bottom: 0 $important;
+}
+
+.u-pl0 {
+  padding-left: 0 $important;
+}

@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+.p-order-sec03 {
+  background-color: $base-color-main;
+}
+
+.p-order-sec03__title-lv2-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: fluid-size(20, 24);
+}
+
+.p-order-sec03__title-lv2-wrap--line {
+
+  &::after {
+    content: '';
+    display: block;
+    width: rem(56);
+    margin-top: rem(16);
+    border-top: 4px solid $color-accent-secondary;
+  }
+}
+
+.p-order-sec03__title-lv2 {
+  font-weight: $font-weight-bold;
+  font-size: fluid-size(20, 24);
+  @include lh($base-line-height);
+}
+
+.p-order-sec03__title-lv2--sans {
+  font-family: $base-font-family-sans;
+}
+
+.p-order-sec03__title-lv2--serif {
+  font-family: $base-font-family-serif;
+}

@@ -1,0 +1,121 @@
+@use 'global' as *;
+
+$gnav-logo: 60px;
+$gnav-gap: 56px;
+$gnav-item: 123px;
+$gnav-height: $gnav-logo + $gnav-gap + $gnav-item;
+
+.p-gnav {
+  z-index: map-get($layer, gnav);
+
+  @include media(max, md) {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    // background: $base-color-main;
+    background: rgba($base-color-main, 0.94);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @include media(min, md) {
+    display: block !important;
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}
+
+.p-gnav-wrap__logo {
+  @include media(min, md) {
+    display: none;
+  }
+}
+
+// .p-gnav-wrap__logo img {
+//   width: 100%;
+//   max-width: 110px;
+// }
+
+.p-gnav__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem($gnav-gap);
+  margin-top: calc(50% - (rem($gnav-height) / 2));
+}
+
+.p-gnav__list {
+  @include media(max, md) {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    // justify-content: center;
+    height: 100vh;
+    // position: absolute;
+    left: 50%;
+    bottom: 50%;
+    top: calc(50% - rem(180));
+    right: 50%;
+    // gap: fluid-size(32, 80, 'md');
+    letter-spacing: $letter-spacing-xl;
+  }
+
+  @include media(min, md) {
+    display: flex;
+    gap: rem(40);
+  }
+}
+
+.p-gnav__item {
+  @include media(min, md) {
+    opacity: 1;
+  }
+}
+
+.p-gnav__link {
+  @include media(max, md) {
+    color: $color-white;
+    font-family: $base-font-family-serif-Vt;
+    writing-mode: vertical-rl;
+    line-height: $line-height-none;
+    text-orientation: upright;
+  }
+  @include media(min, md) {
+    align-items: center;
+    color: $color-white;
+    display: flex;
+    font-family: $base-font-family-serif-Vt;
+    text-orientation: upright;
+    font-size: rem(14);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-none;
+    writing-mode: vertical-rl;
+    letter-spacing: $letter-spacing-xxl;
+  }
+}
+
+.p-gnav__link[aria-current] {
+  @include media(max, md) {
+    // padding-left: 15px;
+    // border-left: 5px solid #37952f;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #37952f;
+  }
+}
+
+.p-gnav__link {
+  color: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}

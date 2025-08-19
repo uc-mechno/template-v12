@@ -1,0 +1,73 @@
+<%_ const path='../'; _%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- meta -->
+    <%- include(path + '_common/_head', { path:path,pageMeta:global.pageMeta['kodawari'],}) %>
+  </head>
+  <body class="l-body l-body--bg01">
+    <%- include(path + '_common/_header',{ path:path, modifier:'--bg' }) %>
+
+    <!-- main -->
+    <main class="l-main">
+      <div class="p-kodawari-mv js-mv-height">
+        <div class="p-kodawari-mv__title">
+          <!-- 下層ページのメインビュー -->
+          <%- include(path + '_component/_mv', { path:path, pageMeta:global.pageMeta['kodawari'], modifier:'--vertical' }) %>
+        </div>
+      </div>
+
+      <div class="p-kodawari-lead l-kodawari-sec">
+        <div class="p-kodawari-lead__inner l-inner">
+          <p class="p-kodawari-lead__text">
+            小さな町の寿司割烹。<br class="u-md-show" />
+            そのこだわりを多くの皆様に味わっていただきたく、回転寿司という形ではじめたのが、鼓響です。<br class="u-md-show" />全国から厳選のネタを築地や新潟卸売市場から直送し、ご提供しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="p-kodawari-pr-area l-kodawari-pr-area">
+        <div class="p-kodawari-pr-area--bg01">
+          <section class="p-kodawari-sec01">
+            <div class="p-kodawari-sec01__img">
+              <img width="1000" height="1000" loading="lazy" decoding="async" src="<%= path %>assets/images/kodawari03.jpg" alt="マグロ握り" />
+            </div>
+            <div class="p-kodawari-sec01__body">
+              <h2 class="p-kodawari-sec01__title">本物へのこだわり</h2>
+              <p class="p-kodawari-sec01__text">
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+              </p>
+              <p class="p-kodawari-sec01__text">
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="p-kodawari-pr-area--bg02">
+          <section class="p-kodawari-sec02">
+            <div class="p-kodawari-sec02__img">
+              <img width="1000" height="1000" loading="lazy" decoding="async" src="<%= path %>assets/images/kodawari04.jpg" alt="日替わりおすすめ市場直送メニュー" />
+            </div>
+            <div class="p-kodawari-sec02__body">
+              <h2 class="p-kodawari-sec02__title">
+                新鮮なネタは<br />
+                築地や県内の<br />
+                卸売市場からの直送
+              </h2>
+              <p class="p-kodawari-sec02__text">
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- パンくず -->
+      <%- include(path + '_component/_breadcrumb', { path:path, pageMeta:global.pageMeta['kodawari'], }) %>
+    </main>
+    <!-- /main -->
+
+    <%- include(path + '_common/_footer',{path:path,}) %>
+  </body>
+</html>

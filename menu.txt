@@ -1,0 +1,316 @@
+array(11) {
+  [2]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(21) "ダッシュボード"
+    [1]=&gt;
+    string(4) "read"
+    [2]=&gt;
+    string(9) "index.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(43) "menu-top menu-top-first menu-icon-dashboard"
+    [5]=&gt;
+    string(14) "menu-dashboard"
+    [6]=&gt;
+    string(19) "dashicons-dashboard"
+  }
+  [4]=&gt;
+  array(5) {
+    [0]=&gt;
+    string(0) ""
+    [1]=&gt;
+    string(4) "read"
+    [2]=&gt;
+    string(10) "separator1"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(17) "wp-menu-separator"
+  }
+  [10]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(12) "メディア"
+    [1]=&gt;
+    string(12) "upload_files"
+    [2]=&gt;
+    string(10) "upload.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(24) "menu-top menu-icon-media"
+    [5]=&gt;
+    string(10) "menu-media"
+    [6]=&gt;
+    string(21) "dashicons-admin-media"
+  }
+  [15]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(9) "リンク"
+    [1]=&gt;
+    string(12) "manage_links"
+    [2]=&gt;
+    string(36) "edit-tags.php?taxonomy=link_category"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(24) "menu-top menu-icon-links"
+    [5]=&gt;
+    string(10) "menu-links"
+    [6]=&gt;
+    string(21) "dashicons-admin-links"
+  }
+  [5]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(6) "投稿"
+    [1]=&gt;
+    string(10) "edit_posts"
+    [2]=&gt;
+    string(8) "edit.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(37) "menu-top menu-icon-post open-if-no-js"
+    [5]=&gt;
+    string(10) "menu-posts"
+    [6]=&gt;
+    string(20) "dashicons-admin-post"
+  }
+  [59]=&gt;
+  array(5) {
+    [0]=&gt;
+    string(0) ""
+    [1]=&gt;
+    string(4) "read"
+    [2]=&gt;
+    string(10) "separator2"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(17) "wp-menu-separator"
+  }
+  [60]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(6) "外観"
+    [1]=&gt;
+    string(18) "edit_theme_options"
+    [2]=&gt;
+    string(10) "themes.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(29) "menu-top menu-icon-appearance"
+    [5]=&gt;
+    string(15) "menu-appearance"
+    [6]=&gt;
+    string(26) "dashicons-admin-appearance"
+  }
+  [65]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(16) "プラグイン "
+    [1]=&gt;
+    string(16) "activate_plugins"
+    [2]=&gt;
+    string(11) "plugins.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(26) "menu-top menu-icon-plugins"
+    [5]=&gt;
+    string(12) "menu-plugins"
+    [6]=&gt;
+    string(23) "dashicons-admin-plugins"
+  }
+  [70]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(18) "プロフィール"
+    [1]=&gt;
+    string(4) "read"
+    [2]=&gt;
+    string(11) "profile.php"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(24) "menu-top menu-icon-users"
+    [5]=&gt;
+    string(10) "menu-users"
+    [6]=&gt;
+    string(21) "dashicons-admin-users"
+  }
+  [99]=&gt;
+  array(5) {
+    [0]=&gt;
+    string(0) ""
+    [1]=&gt;
+    string(4) "read"
+    [2]=&gt;
+    string(14) "separator-last"
+    [3]=&gt;
+    string(0) ""
+    [4]=&gt;
+    string(17) "wp-menu-separator"
+  }
+  ["76.295"]=&gt;
+  array(7) {
+    [0]=&gt;
+    string(23) "All-in-One WP Migration"
+    [1]=&gt;
+    string(6) "export"
+    [2]=&gt;
+    string(12) "ai1wm_export"
+    [3]=&gt;
+    string(23) "All-in-One WP Migration"
+    [4]=&gt;
+    string(53) "menu-top menu-icon-generic toplevel_page_ai1wm_export"
+    [5]=&gt;
+    string(26) "toplevel_page_ai1wm_export"
+    [6]=&gt;
+    string(23) "dashicons-admin-generic"
+  }
+}
+array(9) {
+  ["index.php"]=&gt;
+  array(1) {
+    [0]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(9) "ホーム"
+      [1]=&gt;
+      string(4) "read"
+      [2]=&gt;
+      string(9) "index.php"
+    }
+  }
+  ["upload.php"]=&gt;
+  array(2) {
+    [5]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(15) "ライブラリ"
+      [1]=&gt;
+      string(12) "upload_files"
+      [2]=&gt;
+      string(10) "upload.php"
+    }
+    [10]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(42) "新しいメディアファイルを追加"
+      [1]=&gt;
+      string(12) "upload_files"
+      [2]=&gt;
+      string(13) "media-new.php"
+    }
+  }
+  ["edit-comments.php"]=&gt;
+  array(1) {
+    [0]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(18) "コメント一覧"
+      [1]=&gt;
+      string(10) "edit_posts"
+      [2]=&gt;
+      string(17) "edit-comments.php"
+    }
+  }
+  ["edit.php"]=&gt;
+  array(2) {
+    [5]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(12) "投稿一覧"
+      [1]=&gt;
+      string(10) "edit_posts"
+      [2]=&gt;
+      string(8) "edit.php"
+    }
+    [10]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(21) "新規投稿を追加"
+      [1]=&gt;
+      string(10) "edit_posts"
+      [2]=&gt;
+      string(12) "post-new.php"
+    }
+  }
+  ["edit.php?post_type=page"]=&gt;
+  array(2) {
+    [5]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(21) "固定ページ一覧"
+      [1]=&gt;
+      string(10) "edit_pages"
+      [2]=&gt;
+      string(23) "edit.php?post_type=page"
+    }
+    [10]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(30) "新規固定ページを追加"
+      [1]=&gt;
+      string(10) "edit_pages"
+      [2]=&gt;
+      string(27) "post-new.php?post_type=page"
+    }
+  }
+  ["profile.php"]=&gt;
+  array(1) {
+    [5]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(18) "プロフィール"
+      [1]=&gt;
+      string(4) "read"
+      [2]=&gt;
+      string(11) "profile.php"
+    }
+  }
+  ["tools.php"]=&gt;
+  array(1) {
+    [5]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(24) "利用可能なツール"
+      [1]=&gt;
+      string(10) "edit_posts"
+      [2]=&gt;
+      string(9) "tools.php"
+    }
+  }
+  ["edit-tags.php?taxonomy=link_category"]=&gt;
+  array(1) {
+    [15]=&gt;
+    array(3) {
+      [0]=&gt;
+      string(24) "リンクカテゴリー"
+      [1]=&gt;
+      string(17) "manage_categories"
+      [2]=&gt;
+      string(36) "edit-tags.php?taxonomy=link_category"
+    }
+  }
+  ["options-general.php"]=&gt;
+  array(1) {
+    [0]=&gt;
+    array(4) {
+      [0]=&gt;
+      string(18) "Custom Field Suite"
+      [1]=&gt;
+      string(10) "edit_pages"
+      [2]=&gt;
+      string(22) "edit.php?post_type=cfs"
+      [3]=&gt;
+      string(27) "フィールドグループ"
+    }
+  }
+}

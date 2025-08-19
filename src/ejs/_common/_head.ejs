@@ -1,0 +1,54 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<!-- ogp -->
+<%_ if(pageMeta.type) { _%>
+<meta property="og:type" content="<%= pageMeta.type %>" />
+<%_ }else{ _%>
+<meta property="og:type" content="website" />
+<%_ } _%> <%_ if(pageMeta.titleJa) { _%>
+<title><%= pageMeta.titleJa%></title>
+<%_ }else{ _%>
+<title>サイトタイトル</title>
+<%_ } _%>
+<meta name="description" content="<%= pageMeta.description %>" />
+<meta property="og:title" content="<%= pageMeta.titleJa%>" />
+<meta property="og:description" content="<%= pageMeta.description %>" />
+<%_ if(pageMeta.url) { _%>
+<meta property="og:url" content="<%= global.siteUrl + pageMeta.url %>" />
+<%_ }else{ _%>
+<meta property="og:url" content="<%= global.siteUrl %>" />
+<%_ } _%>
+<!-- ogp-image -->
+<%_ if(pageMeta.ogpImage) { _%>
+<meta property="og:image" content="<%= global.siteUrl + pageMeta.ogpImage %>" />
+<%_ }else{ _%>
+<meta property="og:image" content="<%= global.siteUrl %>/assets/img/ogp.webp" />
+<%_ } _%>
+<meta property="og:locale" content="ja_JP" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@traveler20site" />
+<!-- ファビコン -->
+<link rel="icon" type="image/x-icon" href="<%= path%>assets/img/favicon.ico" />
+<!-- v8 -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+<!-- v9 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<!-- css -->
+<link rel="stylesheet" href="<%= path%>assets/css/bundle_static.css?ver=" />
+<link rel="stylesheet" href="<%= path%>assets/css/shame.css?ver=" />
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="<%= path%>assets/js/libs/modernizr-custom.min.js"></script>
+<script src="<%= path%>assets/js/libs/Lazyestload.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script> -->
+<!-- <script src="<%= path%>assets/js/libs/vivus.min.js"></script> -->
+<!-- v8 -->
+<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+<!-- v9 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script defer src="<%= path%>assets/js/bundle_static.js?ver="></script>
+<!-- <script defer src="<%= path%>assets/js/bundle.min.js?ver="></script> -->

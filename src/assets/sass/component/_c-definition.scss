@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+/*
+## Definition
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: definition
+---
+
+```
+<dl class="c-definition">
+  <div class="c-definition__inner">
+    <div class="c-definition__body">
+      <dt class="c-definition__term">営業時間</dt>
+      <dd class="c-definition__desc">11:00～22:00</dd>
+    </div>
+  </div>
+</dl>
+
+```
+*/
+
+// 要素の高さを指定
+$definition-heigth: 78px;
+
+.c-definition__body {
+  display: flex;
+  align-items: center;
+}
+
+.c-definition__term {
+  flex: 0 0 fluid-size(120, 200);
+  font-size: rem(14);
+  font-weight: $font-weight-bold;
+  background-color: $color-accent-secondary;
+  padding: rem(16) rem(12);
+  border-bottom: 1px solid $base-color-sub;
+  min-height: rem($definition-heigth);
+  display: grid;
+  place-items: center;
+  @include lh($base-line-height);
+}
+
+.c-definition__desc {
+  flex: 1 1 0%;
+  display: grid;
+  align-items: center;
+  text-align: left;
+  font-size: rem(14);
+  background-color: $base-color-sub;
+  padding: rem(16);
+  border-bottom: 1px solid $color-accent-secondary;
+  min-height: rem($definition-heigth);
+  @include lh($base-line-height);
+}

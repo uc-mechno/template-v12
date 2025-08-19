@@ -1,0 +1,13 @@
+@use "global/" as *;
+
+.u-visible {
+  visibility: visible $important;
+}
+
+.u-hidden {
+  visibility: hidden $important;
+}
+
+.u-collapse {
+  visibility: collapse $important;
+}

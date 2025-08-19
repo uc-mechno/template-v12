@@ -1,0 +1,231 @@
+<% const path='./' ; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- meta -->
+    <%- include(path + '_common/_head' ,{path:path, pageMeta:global.pageMeta['home'], }) %>
+  </head>
+
+  <body class="l-body">
+
+    <div class="l-wrapper">
+
+      <!-- <div id="js-splash" class="l-splash">
+        <div id="js-splash_logo" class="l-splash__logo">
+          <svg id="js-mask" class="l-splash__mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="712.8" height="279.2" viewBox="0 0 712.8 279.2" style="enable-background: new 0 0 712.8 279.2" xml:space="preserve">
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<%= path %>assets/images/common/splash.svg" width="712.8" height="279.2" mask="url(#clipmask)"></image>
+            <mask id="clipmask" maskUnits="objectBoundingBox">
+              <path class="st0" d="m205.5,70.7s-25.4-20.8-42.2-24.5c-40.3-8.9-128,35-117.4,109.5,9.9,70.1,74.5,80.9,102.9,78.1s77.8-14.9,78.3-90.5-82.2,29.9-43.5,28.3" />
+              <path
+                class="st0"
+                d="m303,89.4s52.4-26.3,54.9-16.5-40.6,47.5-41.1,49.6,32.2-1.4,41.2-10.5-14.3-90.3-20.1-68.1-1.1,79.6-1.1,83.9-32.6,22.5-28.1,28.4,15.7,21.2,20.3,21.2-11.7-21.6-3.3-26.4,25.8-21.3,29.5-7.8-17.9,40.5-23.7,39.4-18,2.1-19.1,11.1,10,13.2,13.7,14.8,13.2-26.4,21.6-24.3,18.9-2,14.5,11.1-31.9,48.7-44.5,48.9-29.5-1.4,1.1-11.7,45.9-24.5,51.2-33.5,20.3-93.4,18.1-106-28.1-5.8-16.5,3.2,75.2-13.9,78.6-25.5-28-45.2-31.6-36.2-9,80.2-11.1,84.9-9.2,34.3-19.4,33.2,51-26.1,52.1-20.7-41.7,83.5-55.9,87.7,0-46.9,9.5-41.7,59.1,57.7,82.3,57.6c0,0,92.3-181.4,86.5-189.4s-36.7,31.1-32.3,32.9,27.8,7.9,30.3,6.5-42.7,11.6-33.9,20.3,18.7,11.3,30.5,8.9,6.8-13.5-3.3-3.6-15.3,32.2-15.3,32.2c0,0,30-52.3,37.9-57.8s26-29.9,34.3-20.5,22.6,16.6,9.6,24.4-34.2,15.7-39.9,12-8.9-25.1-4.1-18.7-1.7,33.4-2.5,41.9,47.9,6.6,45.4,0-31.5-12.7-25.9-6.6,26.5-52.4,41.6-56.1,59.9-16.9,49.6-3.2-29.4,20-23.8,24,42.5,14.5,31.4,25.8-59.7-22.2-59.1-27,6.7-11.4,10.6-2.5,2.1,56.1-1.1,60.6-49.1,7.3-47.5-1.1,12.7,4,12.7,8.2-30.1,19.3-31.5,8.9,50.2.1,58.5-3.6-72.8,5.6-69.7,14.9,14.3,16.7,18.4,17.8,21-30.5,33.9-21.3,9.4,12.2,3.8,17.5-91.4,16-91.2,9.5,2.1-10.8,11.4-4.5,137,4.1,136.2-.7-15.4-2.5-23.9-4.1,21.1,11.1,20.4,22.9-74.1,43-90.8,40.3-47.8-16.1-19.3-33.9,67.5-18.1,82.8-7.8,32.1,27.1-1,35.5-89.2-4.6-81.6-10.5,39.4-9.7,50.8-7.5"
+              />
+            </mask>
+          </svg>
+        </div>
+      </div> -->
+
+      <%- include(path + '_common/_header' ,{path:path,}) %>
+
+      <!-- main -->
+      <main class="l-main">
+        <section class="l-top-mv p-top-mv js-mv-height">
+          <div class="p-top-mv__inner">
+            <div class="p-top-mv__header">
+              <h2 class="p-top-mv__title"><span class="p-top-mv__title-col01">厳選された素材の</span><br /><span class="p-top-mv__title-col02">本物の味を</span><br /><span class="p-top-mv__title-col03">ご賞味ください</span></h2>
+            </div>
+
+            <div class="swiper p-top-mv-swiper js-top-mv-swiper">
+              <div class="swiper-wrapper p-top-mv-swiper__wrapper">
+                <div class="swiper-slide p-top-mv-swiper__slide">
+                  <div class="swiper-img p-top-mv-swiper__img p-top-mv-swiper__img--slide01"></div>
+                </div>
+                <div class="swiper-slide p-top-mv-swiper__slide">
+                  <div class="swiper-img p-top-mv-swiper__img p-top-mv-swiper__img--slide02"></div>
+                </div>
+                <div class="swiper-slide p-top-mv-swiper__slide">
+                  <div class="swiper-img p-top-mv-swiper__img p-top-mv-swiper__img--slide03"></div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination p-top-mv-swiper__pagination"></div>
+            </div>
+
+            <div class="p-top-mv__scroll"><span>SCROLL</span></div>
+          </div>
+        </section>
+        <!-- /p-mv -->
+
+        <div class="p-top-bg">
+          <section class="p-top-news l-top-news">
+            <div class="p-top-news__inner">
+              <div class="p-top-news__header">
+                <h2 class="p-top-news__title">お知らせ</h2>
+                <p class="p-top-news__link"><a href="<%= path %>news/">一覧を見る</a></p>
+              </div>
+              <div class="swiper p-top-news__list js-top-news-swiper">
+                <div class="swiper-wrapper p-top-news__items">
+                  <!-- ループ処理開始 -->
+                  <%- include(path + '_component/_top-news',{ path:path, pageMeta:global.pageMeta['home'] }) %>
+                  <!-- ループ終了 -->
+                </div>
+                <div class="swiper-button-prev p-top-news__button-prev"></div>
+                <div class="swiper-button-next p-top-news__button-next"></div>
+              </div>
+            </div>
+          </section>
+          <!-- /p-top-news -->
+
+          <div class="p-top-menu l-top-menu">
+            <!-- <div class="p-top-menu__bg02"><img width="1920" height="344" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg10.webp" alt="" /></div> -->
+            <div class="p-top-menu__inner l-inner">
+              <div class="p-top-pickup l-top-pickup">
+                <div class="p-top-pickup__inner">
+                  <div class="p-top-pickup__wrapper">
+                    <div class="p-top-pickup__title">
+                      <p class="p-top-pickup__heading">旬のおすすめ</p>
+                    </div>
+                    <div class="p-top-pickup__img blurTrigger">
+                      <a href="<%= path %>pickup">
+                        <img width="718" height="404" loading="lazy" decoding="async" src="<%= path %>assets/images/menu_pickup01.jpg" alt="旬のおすすめ" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /p-top-pickup -->
+
+              <div class="p-top-menu-cat l-top-menu-cat l-unit">
+                <div class="p-top-menu-cat__inner">
+                  <div class="p-top-menu-cat__list">
+                    <div class="p-top-menu-cat__item blurTrigger delay-time05">
+                      <a href="<%= path %>menus/#zanmai">
+                        <img width="160" height="480" loading="lazy" decoding="async" src="<%= path %>assets/images/menu_zanmai01.png" alt="三昧盛り" />
+                      </a>
+                    </div>
+                    <div class="p-top-menu-cat__item blurTrigger delay-time1">
+                      <a href="<%= path %>menus/#teiban">
+                        <img width="160" height="480" loading="lazy" decoding="async" src="<%= path %>assets/images/menu_teiban01.png" alt="定番握り" />
+                      </a>
+                    </div>
+                    <div class="p-top-menu-cat__item blurTrigger delay-time15">
+                      <a href="<%= path %>menus/#ippin">
+                        <img width="160" height="480" loading="lazy" decoding="async" src="<%= path %>assets/images/menu_ippin01.png" alt="一品料理" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /p-top-menu-cat -->
+
+              <div class="p-top-menu-other l-top-menu-other l-unit">
+                <div class="p-top-menu-other__inner">
+                  <div class="p-top-menu-other__list blurTrigger">
+                    <a class="p-top-menu-other__item p-top-menu-other__item--bg01" href="<%= path %>menus/#lunch">
+                      <p class="p-top-menu-other__title">ランチメニュー</p>
+                    </a>
+                    <a class="p-top-menu-other__item p-top-menu-other__item--bg02" href="<%= path %>takeout">
+                      <p class="p-top-menu-other__title">お持ち帰り</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- /p-top-menu-other -->
+            </div>
+            <!-- <div class="p-top-menu__bg01"><img width="1920" height="1697" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg11.webp" alt=""></div> -->
+            <!-- <div class="p-top-menu__bg04"><img width="" height="" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg04.webp" alt=""></div>
+        <div class="p-top-menu__bg05"><img width="" height="" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg05.webp" alt=""></div> -->
+          </div>
+          <!-- /p-top-menu -->
+
+          <div class="p-top-pr-area l-top-pr-area">
+            <section class="p-top-kodawari l-top-pr-area__unit">
+              <div class="p-top-kodawari__img lineTrigger">
+                <div class="line">
+                  <div class="lineinappear">
+                    <img width="1000" height="667" loading="lazy" decoding="async" src="<%= path %>assets/images/pr_kodawari01.jpg" alt="職人が寿司を握る" />
+                  </div>
+                </div>
+              </div>
+              <div class="p-top-kodawari__body blurTrigger">
+                <h2 class="p-top-kodawari__title">
+                  新潟の旬を味わう<br />
+                  心に響く匠の寿司
+                </h2>
+                <p class="p-top-kodawari__text">
+                  小さな町の寿司割烹。そのこだわりを多くの皆様に味わっていただきたく、回転寿司という形ではじめたのが、鼓響です。<br />
+                  全国から厳選のネタを築地や新潟卸売市場から直送し、ご提供しています。
+                </p>
+                <p class="p-top-kodawari__link"><a href="<%= path %>kodawari/">鼓響のこだわり</a></p>
+              </div>
+            </section>
+            <!-- /p-top-kodawari -->
+
+            <section class="p-top-osusume l-top-pr-area__unit">
+              <div class="p-top-osusume__img lineTrigger">
+                <div class="line">
+                  <div class="lineinappear">
+                    <img width="1000" height="667" loading="lazy" decoding="async" src="<%= path %>assets/images/pr_osusume01.jpg" alt="日替わりおすすめ市場直送メニュー" />
+                  </div>
+                </div>
+              </div>
+              <div class="p-top-osusume__body blurTrigger">
+                <h2 class="p-top-osusume__title">
+                  日替わりおすすめ<br />
+                  市場直送メニュー
+                </h2>
+                <p class="p-top-osusume__text">
+                  毎日変わる市場直送のおすすめメニュー！<br />
+                  店内の掲示板に20～30種の日替わりメニューを表示しています。ご来店の際は是非ご確認ください！
+                </p>
+                <p class="p-top-osusume__link">
+                  <a href="<%= path %>menus/">市場直送を詳しく</a>
+                </p>
+              </div>
+            </section>
+            <!-- /p-top-osusume -->
+
+            <section class="p-top-initiatives l-top-pr-area__unit">
+              <div class="p-top-initiatives__img lineTrigger">
+                <div class="line">
+                  <div class="lineinappear">
+                    <img width="1000" height="667" loading="lazy" decoding="async" src="<%= path %>assets/images/pr_initiatives01.jpg" alt="海洋を泳ぐマグロ" />
+                  </div>
+                </div>
+              </div>
+              <div class="p-top-initiatives__body blurTrigger">
+                <h2 class="p-top-initiatives__title">鼓響の取り組み</h2>
+                <p class="p-top-initiatives__text">鼓響では国連が提唱する「SDGs（持続可能な開発目標）」に賛同します。<br />国際社会の一員としてより良い社会の実現に向け、事業を通して貢献していきます。</p>
+                <p class="p-top-initiatives__link"><a href="<%= path %>initiatives/">鼓響の取り組み</a></p>
+              </div>
+            </section>
+          </div>
+          <!-- /p-top-pr-area -->
+
+          <section class="p-top-info l-top-info">
+            <div class="p-top-info__inner l-inner">
+              <div class="p-top-info__title-wrap blurTrigger">
+                <h2 class="p-top-info__title">店舗情報</h2>
+              </div>
+              <div class="p-top-info__button blurTrigger delay-time05">
+                <p class="p-top-info__button01"><a class="c-button c-button--icon02 c-button--lg" href="<%= path %>store/#yoshida">廻る鼓響 吉田店</a></p>
+                <p class="p-top-info__button02"><a class="c-button c-button--icon02 c-button--lg" href="<%= path %>store/#tubamesanjo">回転寿司鼓響 燕三条店</a></p>
+              </div>
+            </div>
+
+            <!-- <div class="p-top-info__bg01"><img width="1920" height="790" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg03.webp" alt=""></div> -->
+          </section>
+          <!-- /p-top-info -->
+          <div class="p-top-bg__menu01"><img width="1920" height="344" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg10.png" alt="" /></div>
+          <div class="p-top-bg__menu02"><img width="1920" height="1697" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg11.png" alt="" /></div>
+          <div class="p-top-bg__info01"><img width="1920" height="790" loading="lazy" decoding="async" src="<%= path %>assets/images/common/bg03.png" alt="" /></div>
+        </div>
+        <!-- /p-top-bg -->
+      </main>
+      <!-- /main -->
+
+      <%- include(path + '_common/_footer' ,{path:path,}) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+@use 'global' as *;
+
+.l-page-header {
+  background-color: $base-color-main;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: fluid-size(200, 360);
+}
+
+.l-page-header--horizontal {
+  display: grid;
+  place-content: center;
+}
+
+.l-page-header--vertical {
+  display: block;
+}
+
+.webp {
+
+  .l-page-header--horizontal {
+    background-image: url('#{$pathImages}/common/bg03.png.webp');
+  }
+
+  .l-page-header--vertical {
+    background-image: url('#{$pathImages}/common/bg12.png.webp');
+  }
+}
+
+.no-webp {
+
+  .l-page-header--horizontal {
+    background-image: url('#{$pathImages}/common/bg03.png');
+  }
+
+  .l-page-header--vertical {
+    background-image: url('#{$pathImages}/common/bg12.png');
+  }
+}
+
+.l-page-header--vertical .l-page-header__title {
+  padding-top: fluid-size(16, 80);
+}
+
+.l-page-header__title {
+  display: flex;
+}

@@ -1,0 +1,74 @@
+@use 'global' as *;
+
+/*
+## heading
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: heading
+---
+
+```
+<h2 class="c-heading">おすすめ企画<br>限定メニュー</h2>
+```
+*/
+
+.c-heading {
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif-Vt;
+  color: $color-white;
+  writing-mode: vertical-rl;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
+  letter-spacing: $letter-spacing-xl;
+  line-height: $line-height-md;
+  text-orientation: upright;
+  @include margin-auto;
+}
+
+.c-heading--indent {
+  text-indent: -1em;
+  padding-top: 1em;
+}
+
+.c-heading--horizontal {
+  writing-mode: inherit;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(min, md) {
+    text-align: left;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+// .c-heading--br {
+//   @include media(min, md) {
+
+//     br {
+//       display: none;
+//     }
+//   }
+// }
+
+.c-heading--lv2 {
+  font-size: fluid-size(24, 28);
+}
+
+.c-heading--lv2--primary {
+  font-size: fluid-size(24, 28);
+}
+
+.c-heading--lv2--secondary {
+  font-size: fluid-size(20, 28);
+}
+
+.c-heading--lv3 {
+}
+
+.c-heading--lv3--primary {
+}
+
+.c-heading--lv3--secondary {
+}

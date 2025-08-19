@@ -1,0 +1,52 @@
+@use 'global' as *;
+
+.p-top-pickup {
+}
+
+.p-top-pickup__inner {
+}
+
+.p-top-pickup__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.p-top-pickup__title {
+  order: 2;
+  position: relative;
+  z-index: map-get($layer, 'decoration');
+  margin-left: rem(-40);
+  margin-top: rem(-40);
+  display: none;
+
+  @include media(min, md) {
+    display: block;
+  }
+}
+
+.p-top-pickup__heading {
+  writing-mode: vertical-rl;
+  font-family: $base-font-family-serif-Vt;
+  padding: rem(30) rem(90);
+  background-color: $color-accent-secondary;
+  font-size: rem(20);
+  letter-spacing: $letter-spacing-xxl;
+  font-weight: $font-weight-bold;
+}
+
+.p-top-pickup__heading {
+}
+
+.p-top-pickup__img {
+  text-align: center;
+  order: 1;
+  position: relative;
+  aspect-ratio: 16 / 9;
+
+  & img {
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    width: 100%;
+  }
+}

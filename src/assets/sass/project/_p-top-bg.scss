@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.p-top-bg {
+  position: relative;
+  z-index: map-get($layer, default);
+}
+
+.p-top-bg__block {
+  position: absolute;
+  z-index: map-get($layer, decoration);
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  & img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+}

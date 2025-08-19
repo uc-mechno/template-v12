@@ -1,0 +1,70 @@
+@use 'global' as *;
+
+.p-kodawari-sec01 {
+  position: relative;
+  z-index: map-get($layer, 'default');
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: fluid-size(48, 72);
+  width: 100%;
+  position: relative;
+
+  @include media(min, md) {
+    flex-direction: row;
+  }
+
+  @include media(min, lg) {
+    width: calc((100vw + #{$layout-width-inner}) / 2);
+  }
+}
+
+.p-kodawari-sec01__body {
+  padding-top: fluid-size(24, 40);
+  padding-right: $padding-sp;
+  padding-bottom: fluid-size(24, 40);
+  padding-left: $padding-sp;
+  flex-grow: 1;
+  @include media(min, md) {
+    padding-right: rem(48);
+    padding-left: 0;
+  }
+}
+
+.p-kodawari-sec01__title {
+  font-size: rem(20);
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif-Vt;
+  color: $color-white;
+  line-height: $line-height-lg;
+  writing-mode: vertical-rl;
+  @include margin-auto;
+}
+
+.p-kodawari-sec01__text {
+  font-size: rem(14);
+  color: $color-white;
+  text-align: justify;
+  font-family: $base-font-family-serif;
+  line-height: $line-height-md;
+  margin-top: rem(48);
+  @include lh($line-height-md);
+}
+
+.p-kodawari-sec01__img {
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  @include media(min, md) {
+    width: 64%;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+}
+
+.p-kodawari-sec01__img img {
+  width: 100%;
+  height: auto;
+}

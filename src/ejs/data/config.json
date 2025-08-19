@@ -1,0 +1,160 @@
+{
+  "global": {
+    "siteName": "サンプルサイト",
+    "siteUrl": "https://example.com",
+    "pageMeta": {
+      "home": {
+        "id": "1",
+        "name": "home",
+        "titleEn": "TOP PAGE",
+        "titleJa": "トップページ",
+        "description": "トップページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "website",
+        "url": "/"
+      },
+      "menus": {
+        "id": "2",
+        "name": "menus",
+        "titleEn": "menus",
+        "titleJa": "鼓響の寿司メニュー",
+        "description": "MENUSページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/menus"
+      },
+      "takeout": {
+        "id": "3",
+        "name": "takeout",
+        "titleEn": "takeout",
+        "titleJa": "鼓響のお持ち帰りメニュー",
+        "description": "TAKEOUTページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/takeout"
+      },
+      "store": {
+        "id": "4",
+        "name": "store",
+        "titleEn": "store",
+        "titleJa": "店舗情報",
+        "description": "STOREページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/store"
+      },
+      "kodawari": {
+        "id": "5",
+        "name": "kodawari",
+        "titleEn": "kodawari",
+        "titleJa": "鼓響のこだわり",
+        "description": "KODAWARIページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/kodawari"
+      },
+      "initiatives": {
+        "id": "6",
+        "name": "initiatives",
+        "titleEn": "initiatives",
+        "titleJa": "鼓響の取り組み",
+        "description": "INITIATIVESページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/initiatives"
+      },
+      "service": {
+        "id": "2",
+        "name": "service",
+        "titleEn": "SERVICE",
+        "titleJa": "事業内容",
+        "description": "SERVICEページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/service"
+      },
+      "work": {
+        "id": "3",
+        "name": "work",
+        "titleEn": "WORK",
+        "titleJa": "制作実績",
+        "description": "WORKページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/work"
+      },
+      "company": {
+        "id": "4",
+        "name": "company",
+        "titleEn": "COMPANY",
+        "titleJa": "私達について",
+        "description": "COMPANYページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/company"
+      },
+      "recruit": {
+        "id": "5",
+        "name": "recruit",
+        "titleEn": "RECRUIT",
+        "titleJa": "採用情報",
+        "description": "RECRUITページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/recruit"
+      },
+      "contact": {
+        "id": "6",
+        "name": "contact",
+        "titleEn": "CONTACT",
+        "titleJa": "お問い合わせ",
+        "description": "CONTACTページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/contact"
+      },
+      "news": {
+        "id": "7",
+        "name": "news",
+        "titleEn": "NEWS",
+        "titleJa": "お知らせ",
+        "description": "NEWSページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/news"
+      },
+      "news01": {
+        "id": "8",
+        "name": "news01",
+        "titleEn": "NEWS",
+        "titleJa": "お知らせ",
+        "description": "NEWS01ページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/news/news01",
+        "parent" :{
+          "name": "news",
+          "titleEn": "NEWS",
+          "titleJa": "お知らせ",
+          "url": "/news"
+        }
+      },
+      "order": {
+        "id": "9",
+        "name": "order",
+        "titleEn": "ORDER",
+        "titleJa": "お持ち帰りご注文方法",
+        "description": "orderページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/takeout/order",
+        "parent" :{
+          "name": "takeout",
+          "titleEn": "TAKEOUT",
+          "titleJa": "鼓響のお持ち帰りメニュー",
+          "url": "/takeout"
+        }
+      }
+    }
+  }
+}

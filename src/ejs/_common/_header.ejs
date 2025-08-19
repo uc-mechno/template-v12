@@ -1,0 +1,27 @@
+<%
+var modifier;
+if (modifier === '--bg' ) { %>
+<header class="l-header p-header p-header<%= modifier %>">
+<% } else { %>
+<header class="l-header p-header p-header">
+<% } %>
+  <div class="p-header__inner">
+    <div class="p-header__logo">
+      <a href="<%= path %>" class="p-header__logoLink">
+        <img width="148" height="80" loading="eager" decoding="async" src="<%= path %>assets/images/common/logo_header.svg" alt="廻る鼓響（こきょう） 回転寿司" />
+      </a>
+    </div>
+    <button type="button" id="js-hamburger" class="c-hamburger" aria-label="メニューを開く" aria-controls="js-gnav" aria-expanded="false">
+      <span class="c-hamburger__line" aria-hidden="true"></span>
+    </button>
+    <nav id="js-gnav" class="p-gnav" aria-label="メインメニュー">
+      <ul class="p-gnav__list" id="menu">
+        <li class="p-gnav__item delay-time05 blurTrigger"><a href="<%= path %>menus" class="p-gnav__link" aria-current="page">メニュー</a></li>
+        <li class="p-gnav__item delay-time1 blurTrigger"><a href="<%= path %>takeout" class="p-gnav__link">お持ち帰り</a></li>
+        <li class="p-gnav__item delay-time15 blurTrigger"><a href="<%= path %>store" class="p-gnav__link">店舗情報</a></li>
+        <li class="p-gnav__item delay-time2 blurTrigger"><a href="<%= path %>kodawari" class="p-gnav__link">鼓響のこだわり</a></li>
+        <li class="p-gnav__item delay-time25 blurTrigger"><a href="<%= path %>initiatives" class="p-gnav__link">鼓響の取り組み</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

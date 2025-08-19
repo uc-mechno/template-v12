@@ -1,0 +1,110 @@
+@use 'global' as *;
+
+.p-header {
+  position: absolute;
+  z-index: map-get($layer, header-bg);
+  width: 100%;
+  transition: 0.3s;
+
+  &::after {
+    content: '';
+    background: linear-gradient(0deg, rgba(28, 12, 12, 0), rgba(28, 12, 12, 1));
+    z-index: map-get($layer, header-gradient);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.is-fixed {
+    background-color: $base-color-main;
+    position: fixed;
+  }
+}
+
+.p-header--bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.webp {
+  .p-header--bg {
+    background-image: url('#{$pathImages}/common/bg13.jpg.webp');
+  }
+}
+
+.no-webp {
+  .p-header--bg {
+    background-image: url('#{$pathImages}/common/bg13.jpg');
+  }
+}
+
+.p-header.is-color {
+  background-color: #21054d;
+}
+
+.p-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-right: rem($padding-sp);
+  padding-left: rem($padding-sp);
+  padding-bottom: 0;
+  max-width: $header-width + strip-unit($padding-pc) * 2;
+  @include margin-auto;
+
+  @include media(min, md) {
+    padding-top: rem(16);
+    padding-right: rem($padding-pc);
+    padding-left: rem($padding-pc);
+    padding-bottom: rem(16);
+  }
+}
+
+.p-header--bg .p-header__inner {
+  padding-bottom: fluid-size(180, 360);
+
+  @include media(min, md) {
+    padding-bottom: rem(0);
+  }
+}
+
+.p-header__logo {
+  position: relative;
+  z-index: map-get($layer, header-logo);
+}
+
+.p-header__drawer {
+  @include media(min, md) {
+    display: none;
+  }
+}
+
+.p-header__pc-nav {
+  display: none;
+
+  @include media(min, md) {
+    display: block;
+  }
+}
+
+.p-header__logoLink {
+  color: $color-white;
+  font-size: rem(18);
+  display: block;
+}
+
+.p-header__logoLink img {
+  max-width: 73px;
+  width: 100%;
+  height: auto;
+
+  @include media(min, md) {
+    max-width: 148px;
+  }
+}

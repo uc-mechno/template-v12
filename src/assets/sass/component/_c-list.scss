@@ -1,0 +1,48 @@
+@use 'global' as *;
+
+/*
+## List
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: list
+---
+
+```
+<li class="c-list">
+  <a href="">
+    <div class="c-list__body">
+      <time datetime="2022-10-18" class="c-list__date">2022.10.18</time>
+      <p class="c-list__text">
+        旬の素材を使用した秋の厳選メニューが勢揃い！      </p>
+    </div>
+  </a>
+</li>
+```
+*/
+
+.c-list__body {
+  padding: fluid-size(8, 16);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $color-white;
+  gap: fluid-size(8, 16);
+
+  @include media(min, md) {
+    flex-direction: row;
+  }
+}
+
+.c-list__text {
+  color: $color-white;
+  font-size: fluid-size(14, 16);
+  @include lh($base-line-height);
+}
+
+.c-list__date {
+  color: $color-white;
+  font-family: $base-font-family-serif;
+  font-size: fluid-size(14, 16);
+  line-height: $line-height-none;
+}

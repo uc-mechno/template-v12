@@ -1,0 +1,135 @@
+@use 'global' as *;
+
+$gentei-header-width: 184.81px; // p-top-menu__headerの幅を代入
+$calc-width: $layout-width-canvas + strip-unit($padding-pc) * 2;
+
+.p-top-gentei {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(#331c0b, .9);
+  background-blend-mode: multiply;
+  padding-top: fluid-size(60, 32);
+  padding-bottom: fluid-size(32, 120);
+
+  @include media(min, md) {
+    background-repeat: repeat;
+    background-size: contain;
+  }
+}
+
+.webp {
+
+  .p-top-gentei {
+    background-image: url('#{$pathImages}/common/bg13.png.webp');
+  }
+}
+
+.no-webp {
+
+  .p-top-gentei {
+    background-image: url('#{$pathImages}/common/bg13.png');
+  }
+}
+
+.p-top-gentei__inner {
+  max-width: calc($calc-width + (100% - $calc-width) / 2);
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  @include media(min, md) {
+    grid-auto-flow: column;
+    padding-left: rem(64);
+    grid-template-columns: rem(150) 1fr;
+  }
+}
+
+/**
+ * min-with: auto が指定されているため、min-width: 0; を指定しないと、flexboxの幅が縮まらない
+ * @link https://zenn.dev/bicstone/articles/flex-item-overflow-hidden
+ */
+.p-top-gentei__wrap {
+  min-width: 0;
+}
+
+.p-top-gentei__item a {
+  @include hover {
+    opacity: 1;
+  }
+}
+
+.p-top-gentei__img {
+  aspect-ratio: 684 / 968;
+  overflow: hidden;
+}
+
+.p-top-gentei__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform .3s $ease-in-out;
+  @include hover {
+    transform: scale(1.05);
+  }
+}
+
+.p-top-gentei__controller {
+  justify-content: center;
+  padding-top: rem(24);
+  display: flex;
+  @include media(min, md) {
+    justify-content: flex-end;
+    padding-right: rem(48);
+  }
+}
+
+.p-top-gentei__controller-wrap {
+  display: flex;
+  gap: fluid-size(24, 32);
+  align-items: center;
+  font-size: fluid-size(14, 16);
+}
+
+.p-top-gentei__list {
+  margin-left: rem(64);
+  margin-top: rem(48);
+  @include media(min, md) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.p-top-gentei__button-prev,
+.p-top-gentei__button-next {
+  height: auto;
+  margin-top: 0;
+  aspect-ratio: 1 / 1;
+  position: initial;
+  width: auto;
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: fluid-size(32, 40);
+    width: fluid-size(32, 40);
+  }
+}
+
+.p-top-gentei__button-prev {
+
+  &::after {
+    background-image: url('#{$pathImages}/slide_button_left.svg?var=20231120105551');
+  }
+}
+
+.p-top-gentei__button-next {
+
+  &::after {
+    background-image: url('#{$pathImages}/slide_button_right.svg?var=20231120105551');
+  }
+}
+
+.p-top-gentei__pagination {
+  position: initial;
+}

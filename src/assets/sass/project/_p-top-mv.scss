@@ -1,0 +1,125 @@
+@use 'global' as *;
+
+.p-top-mv {
+  position: relative;
+}
+
+$mv-header-height-pc: 254px; // p-top-mv__headerの高さを代入
+
+.p-top-mv__header {
+  position: absolute;
+  left: 0;
+  color: $color-white;
+  z-index: map-get($layer, 'title');
+  padding-left: rem($padding-sp);
+  top: calc(50% - (rem(30)));
+
+  @include media(min, md) {
+    padding-left: rem($padding-pc);
+    top: calc(50% - (rem($mv-header-height-pc) / 2));
+  }
+
+  @media screen and (min-width: $header-width), print {
+    left: calc((100% - $header-width) / 2);
+  }
+}
+
+.p-top-mv__title {
+  font-size: rem(20);
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif-Vt;
+  color: $color-white;
+  writing-mode: vertical-rl;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: $letter-spacing-xxl;
+  text-indent: -1.2em;
+
+  @include media(min, md) {
+    font-size: rem(28);
+  }
+}
+
+.p-top-mv__video {
+  background-color: $base-color-main;
+  height: 100svh;
+  @include media(min, md) {
+    height: calc(100svh - (rem($top-mv-height-pc) / 3.5));
+  }
+}
+
+.p-top-mv__video video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  width: 100%;
+}
+
+.p-top-mv__title-col03 {
+  margin-top: 1.2rem;
+}
+
+.p-top-mv__subtitle {
+  font-size: rem(16);
+  letter-spacing: 0.108em;
+  line-height: 1.8125;
+  margin-top: rem(20);
+
+  @include media(min, md) {
+    font-size: rem(24);
+  }
+}
+
+.p-top-mv__btn {
+  margin-top: rem(50);
+}
+
+.p-top-mv__scroll {
+  font-size: rem(12);
+  letter-spacing: 0.08em;
+  color: $color-white;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 78px;
+  transform: rotate(90deg);
+  z-index: map-get($layer, 'title');
+}
+
+.p-top-mv__scroll span {
+  position: relative;
+}
+
+.p-top-mv__scroll span::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  background-color: $color-white;
+  transform: rotate(90deg) translateY(0);
+  right: -35px;
+  bottom: -12px;
+  animation: pathmove 1.6s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes pathmove {
+  0% {
+    // right: -25px;
+    transform: rotate(90deg) translateY(30%);
+    opacity: 0;
+  }
+
+  30% {
+    // right: -35px;
+    transform: rotate(90deg) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    // right: -25px;
+    transform: rotate(90deg) translateY(30%);
+    opacity: 0;
+  }
+}

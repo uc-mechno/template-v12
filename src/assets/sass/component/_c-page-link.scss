@@ -1,0 +1,106 @@
+@use 'global' as *;
+
+/*
+## Page-link
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: page-link
+---
+
+```
+<div class="c-page-link">
+  <div class="c-page-link__flex">
+    <div class="c-page-link__prev">
+      <a class="another-link" href="">前の記事</a>
+    </div>
+    <div class="c-page-link__next">
+      <a class="another-link" href="">次の記事</a>
+    </div>
+  </div>
+  <div class="c-page-link__archive">
+    <a href="">お知らせ一覧</a>
+  </div>
+</div>
+```
+*/
+
+.c-page-link__flex {
+  display: flex;
+  align-items: center;
+}
+
+.c-page-link__prev,
+.c-page-link__next {
+  padding: 0 fluid-size(16, 24);
+  width: 50%;
+  position: relative;
+}
+
+.c-page-link__prev {
+  margin-right: auto;
+  text-align: right;
+}
+
+.c-page-link__prev::after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #b8aed5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.c-page-link__next {
+  text-align: left;
+  margin-left: auto;
+}
+
+.c-page-link__prev a,
+.c-page-link__next a {
+  font-size: rem(14);
+  font-family: $base-font-family-serif;
+  line-height: $line-height-none;
+  position: relative;
+  display: flex;
+  gap: fluid-size(8, 16);
+}
+
+.c-page-link__prev a::before,
+.c-page-link__next a::after {
+  content: '';
+  width: rem(34);
+  height: rem(12);
+  border-bottom: solid 1px;
+  transition: width $base-duration $base-timing;
+  margin-top: rem(-2);
+}
+
+.c-page-link__prev a {
+  justify-content: flex-end;
+}
+
+.c-page-link__prev a::before {
+  border-left: solid 1px;
+  transform: skew(315deg);
+}
+
+.c-page-link__next a {
+  justify-content: flex-start;
+}
+
+.c-page-link__next a::after {
+  border-right: solid 1px;
+  transform: skew(45deg);
+}
+
+.c-page-link__archive {
+  font-family: $base-font-family-serif;
+  margin-top: rem(32);
+  text-align: center;
+  font-size: rem(14);
+  line-height: $line-height-none;
+}

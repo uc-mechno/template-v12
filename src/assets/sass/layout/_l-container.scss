@@ -1,0 +1,27 @@
+@use 'global' as *;
+
+.l-container {
+  padding-top: fluid-size(40, 80);
+  padding-bottom: fluid-size(40, 80);
+}
+
+.l-container:not(.l-container--bg) + .l-container:not(.l-container--bg) {
+  padding-top: 0;
+}
+
+.l-container--sm {
+  padding-bottom: fluid-size(30, 60);
+}
+
+.l-container--md {
+  padding-bottom: fluid-size(120, 180);
+}
+
+.l-container--lg {
+  padding-bottom: fluid-size(140, 200);
+}
+
+.l-container--bg {
+  @include full-bg;
+  background-color: $base-color-main;
+}

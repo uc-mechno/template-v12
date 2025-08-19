@@ -1,0 +1,273 @@
+@use '../global' as *;
+@use '../lib/col' as *;
+
+.min-sm {
+  margin: 1px;
+
+  @include media(min, sm) {
+    margin: 1px;
+  }
+}
+
+.min-md {
+  margin: 1px;
+
+  @include media(min, md) {
+    margin: 1px;
+  }
+}
+
+.max-md {
+  @include media(max, md) {
+    padding: 1px;
+  }
+}
+
+.between-sm-lg {
+  @include media(between, sm, lg) {
+    padding: 1px;
+  }
+}
+
+.p-test2 {
+  $test: strip-unit(100px); // 100
+
+  font-size: rem(16);
+  font-size: fs(16, 375, 'vw');
+  font-size: fs(16, 375, '%');
+  font-size: fs(16, 375, 'em');
+  font-size: $test;
+
+  @include media(min, md) {
+    margin: 1px;
+  }
+
+  @include media(max, md) {
+    padding: 1px;
+  }
+
+  @include hover() {
+    text-decoration: underline;
+  }
+
+  @include hover() {
+    background: #ccc;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.clearfix-important {
+  @include clearfix(important);
+}
+
+// @include font-face("Open Sans", "font/OpenSans-Regular", 400, normal, swap, woff ttf);
+
+.full-width {
+  @include full-width;
+}
+
+.full-bg {
+  @include full-bg;
+}
+
+.margin-auto {
+  @include margin-auto;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.em {
+  font-size: em(12);
+  font-size: em(12, 15);
+}
+
+.px {
+  font-size: px(12);
+  font-size: px(12, 15);
+}
+
+.rem {
+  font-size: rem(12);
+  font-size: rem(12, 15);
+}
+
+.aaa {
+  border: 1px solid $dividers-dark;
+  margin: 2px;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.margin-auto {
+  @include margin-auto();
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
+
+.lh {
+  @include lh(2);
+}
+
+.fluid-size {
+  font-size: fluid-size(24px, 60px);
+}
+
+.divide-root {
+  font-size: divide-root(24px);
+}
+
+.divide-root-hoge {
+  font-size: rem(20, 10);
+}
+
+.grid01 {
+  @include grid('.is-grid', 2, 1192, 32);
+}
+
+.grid02 {
+  @include grid('.is-grid', 1, 960, 46);
+}
+
+.is-col-12 {
+}
+
+.z-index {
+  z-index: z-index(header);
+}
+
+.map-get {
+  margin: map-get($breakpoints, 'xs');
+}
+
+.fs {
+  padding: fs(26, map-get($breakpoints, 'xs'), '%');
+}
+
+.fs2 {
+  padding: fs(26, 480, '%');
+}
+
+.fs3 {
+  padding: fs(26, bp(xs), '%');
+}
+
+.breakpoints {
+  margin: bp(xs);
+}
+
+.fsem {
+  padding: fs(10, 20, 'em');
+}
+
+.calc-rem-container {
+  width: calc-rem-container(10, 2);
+}
+
+.clamp {
+  font-size: fluid-size(16, 24);
+}
+
+.vw1 {
+  font-size: vw(768, 24);
+}
+.vw2 {
+  font-size: vw(375);
+}
+
+// .container-query {
+//   @include container-query(my-container, md) {
+//     max-width: 10px;
+//   }
+// }
+
+.column-width-1 {
+  width: column-width(1);
+}
+.column-width-2 {
+  width: column-width(2, 16px);
+}
+// .column-width-3 {
+//   width: column-width(3, 16px);
+// }
+.column-width-3 {
+  width: column-width(3, 20px);
+}
+.column-width-4 {
+  width: column-width(4, 16px);
+}
+.column-width-5 {
+  width: column-width(5, 16px);
+}
+.column-width-6 {
+  width: column-width(6, 16px);
+}
+.column-width-7 {
+  width: column-width(7, 16px);
+}
+.column-width-8 {
+  width: column-width(8, 16px);
+}
+.column-width-9 {
+  width: column-width(9, 16px);
+}
+.column-width-10 {
+  width: column-width(10, 16px);
+}
+.column-width-11 {
+  width: column-width(11, 16px);
+}
+.column-width-12 {
+  width: column-width(12, 16px);
+}
+
+.hover {
+  @include hover() {
+    opacity: 0.8;
+  }
+}
+
+.hover-style {
+  @include hover-style() {
+    opacity: 0.8;
+  }
+}
+
+.focus-style {
+  @include focus-style {
+    opacity: 0.8;
+  }
+}
+
+.responsive-font-size {
+  font-size: clamp(rem(16), vw(32, 768), rem(16));
+}
+
+.vw2 {
+  font-size: vw(32);
+}
+
+.noto-serif-400 {
+  font-family: 'Noto Serif CJK JP';
+  font-weight: 400;
+}
+.noto-serif-700 {
+  font-family: 'Noto Serif CJK JP';
+  font-weight: 700;
+}
+.noto-sans-400 {
+  font-family: 'Noto Sans JP';
+  font-weight: 400;
+}
+.noto-sans-700 {
+  font-family: 'Noto Sans JP';
+  font-weight: 700;
+}

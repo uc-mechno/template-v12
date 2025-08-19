@@ -1,0 +1,55 @@
+@use 'global' as *;
+
+/*
+## Pagenation
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: pagenation
+---
+
+```
+<div class="c-pagenation">
+  <div class="wp-pagenavi" role="navigation">
+    <span aria-current="page" class="current">1</span><a class="page larger" title="ページ 2" href="">2</a><a class="nextpostslink" rel="next" aria-label="次のページ" href="">〉</a>
+  </div>
+</div>
+```
+*/
+
+.c-pagenation .wp-pagenavi {
+  display: flex;
+  gap: rem(8);
+  justify-content: center;
+}
+
+.c-pagenation .wp-pagenavi a,
+.c-pagenation .wp-pagenavi span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(40);
+  height: rem(40);
+  font-size: fluid-size(12, 16);
+  font-family: $base-font-family-serif;
+  color: $color-white;
+  background-color: $base-color-main;
+  border: 1px solid $color-accent-secondary;
+  // transition: .3s ease;
+}
+
+// .c-pagenation a:hover {
+//   color: #4f31a5;
+//   background-color: #f1ebf8;
+//   opacity: 1;
+// }
+
+.c-pagenation .wp-pagenavi span.current {
+  background-color: $color-accent-secondary;
+}
+
+.c-pagenation .wp-pagenavi .previouspostslink,
+.c-pagenation .wp-pagenavi .nextpostslink {
+  border: none;
+}

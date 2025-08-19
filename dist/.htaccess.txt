@@ -1,0 +1,35 @@
+# 利用環境で mod_rewrite（モジュール）が利用できるかの確認。
+<IfModule mod_rewrite.c>
+
+# mod_rewrite（モジュール）の機能を有効化する。無効化する場合は Off。
+RewriteEngine On
+
+# ブラウザから送信される Accept リクエストヘッダに image/webp が含まれるか（WebP をサポートしているかどうか）を確認。
+RewriteCond %{HTTP_ACCEPT} image/webp
+
+# 「リクエストされた URI」に .jpg, .jpeg, .JPG, .JPEG, .png, .PNG の拡張子が含まれているかを判定。 正規表現のメタ文字 (?i) で大文字・小文字を同一視。
+RewriteCond %{REQUEST_URI} (?i)(.*)(\.jpe?g|\.png)$
+
+# WebP 置換画像が存在するか確認。
+RewriteCond %{DOCUMENT_ROOT}%1%2.webp -f
+
+# 上記の指定する条件を満たせば、JPEG や PNG 画像の代わりに WebP 画像を提供。
+RewriteRule (?i)(.*)(\.jpe?g|\.png)$ %1$2\.webp [L,T=image/webp,R]
+
+</IfModule>
+
+# 利用環境で mod_headers（モジュール）が利用できるかの確認。
+<IfModule mod_headers.c>
+
+# mod_headers が有効な場合、Vary レスポンスヘッダに Accept を追加して、ブラウザの機能に応じて WebP と JPEG / PNG をそれぞれキャッシュできるようにキャッシュサーバーに示す。
+Header append Vary Accept env=REDIRECT_accept
+
+</IfModule>
+
+# 利用環境で mod_mime（モジュール）が利用できるかの確認。
+<IfModule mod_mime.c>
+
+# 拡張子.webp ファイルは Content-Type として image/webp を返す設定。
+AddType image/webp .webp
+
+</IfModule>

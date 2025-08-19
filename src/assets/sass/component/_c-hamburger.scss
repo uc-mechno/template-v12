@@ -1,0 +1,132 @@
+@use 'global' as *;
+
+/*
+## Hamburger
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: hamburger
+---
+
+```
+<button type="button" id="js-hamburger" class="c-hamburger" aria-label="メニューを開く" aria-controls="js-gnav" aria-expanded="false">
+  <span class="c-hamburger__line" aria-hidden="true"></span>
+</button>
+```
+*/
+
+.c-hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  z-index: map-get($layer, 'modal');
+  outline: none;
+
+  &.is-fixed {
+    border-radius: 50%;
+    // border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid $color-accent-secondary;
+    position: fixed;
+    top: rem(10);
+    right: rem(12);
+    background-color: $color-white;
+    // box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+    // @include focus-style {
+    //   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
+    //   border: 1px solid $color-accent-secondary;
+    //   border-radius: 50%;
+    // }
+  }
+
+  // @include focus-style {
+  //   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
+  //   border: 1px solid #fff;
+  //   border-radius: 50%;
+  // }
+  // @include hover-style(false) {
+  //   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.8);
+  // }
+
+  &:focus-visible {
+    border: 1px solid $base-color-accent;
+  }
+
+  @include media(min, md) {
+    display: none;
+  }
+}
+
+.c-hamburger__line {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.3s;
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    bottom: -8px;
+  }
+}
+
+.c-hamburger.is-fixed .c-hamburger__line {
+  background: $color-accent-secondary;
+
+  &::before,
+  &::after {
+    background: $color-accent-secondary;
+  }
+}
+
+.c-hamburger[aria-expanded='true'] {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.5);
+  top: rem(10);
+  right: rem(12);
+  border-radius: 50%;
+  position: fixed;
+}
+
+.c-hamburger[aria-expanded='true'] .c-hamburger__line {
+  background: transparent;
+
+  &::before,
+  &::after {
+    background-color: #fff;
+  }
+
+  &::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@include media(min, md) {
+  .c-hamburger {
+    display: none;
+  }
+}

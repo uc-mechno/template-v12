@@ -1,0 +1,5 @@
+# node_modulesを除外する
+node_modules/
+
+# distディレクトリを除外する
+# dist

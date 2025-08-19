@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.l-store-sec {
+  padding-top: fluid-size(40, 80);
+  padding-bottom: fluid-size(40, 80);
+
+  &:last-of-type {
+    padding-bottom: fluid-size(120, 180);
+  }
+}
+
+.l-store-sec:not(.l-store-sec--bg) + .l-store-sec:not(.l-store-sec--bg) {
+  padding-top: 0;
+}
+
+.l-store-sec--bg {
+  @include full-bg;
+  background-color: $base-color-main;
+}

@@ -1,0 +1,103 @@
+@use 'global' as *;
+
+$clamp-primary: fluid-size(16, 32);
+$clamp-secondary: fluid-size(16, 24);
+
+.p-top-recruit {
+  padding-top: fluid-size(60, 120);
+  padding-bottom: fluid-size(60, 120);
+  z-index: map-get($layer, default);
+  position: relative;
+}
+
+.p-top-recruit__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: fluid-size(16, 32);
+  background-color: $color-base-secondary;
+  padding-top: fluid-size(16, 32);
+  padding-right: fluid-size(16, 32);
+  padding-bottom: fluid-size(32, 48);
+  padding-left: fluid-size(16, 32);
+  border-radius: $base-radius;
+}
+
+.p-top-recruit__title-lv2-wrap {
+}
+
+.p-top-recruit__title-lv2 {
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif;
+  font-size: fluid-size(24, 32);
+  color: $base-color-main;
+}
+
+.p-top-recruit__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: fluid-size(16, 32);
+  width: 100%;
+}
+
+.p-top-recruit__img {
+  aspect-ratio: 16 / 5;
+  overflow: hidden;
+  width: 100%;
+}
+
+.p-top-recruit__img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.p-top-recruit__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $clamp-primary;
+  width: 100%;
+  align-items: center;
+
+  @include media(min, md) {
+    flex-direction: row;
+  }
+}
+
+.p-top-recruit__button {
+  flex: 1 0 auto;
+  width: 100%;
+  text-align: center;
+  @include media(min, md) {
+    flex: 1 0 calc((100% - $clamp-primary) / 2);
+  }
+}
+
+.p-top-recruit__button a {
+  max-width: fluid-size(232, 370, 'md');
+  padding: $clamp-secondary $clamp-secondary;
+  display: inline-block;
+  width: 100%;
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif;
+  font-size: fluid-size(16, 24);
+  color: $base-color-main;
+  border: 1px solid $base-color-main;
+  border-radius: $base-radius;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  background-image: url('#{$pathImages}/common/icon01.svg?var=20231120105551');
+  background-repeat: no-repeat;
+  background-position: center right $clamp-secondary;
+  background-size: $clamp-secondary;
+
+  @include media(min, md) {
+    max-width: none;
+  }
+
+  @include hover {
+  }
+}

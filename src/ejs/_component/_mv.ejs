@@ -1,0 +1,27 @@
+<%
+var modifier;
+if (modifier === '--horizontal' ) { %>
+
+<div class="c-section-header c-section-header<%= modifier %>">
+
+  <% } else if (modifier === '--vertical' ) { %>
+
+<div class="c-section-header c-section-header<%= modifier %>">
+
+  <% } else { %>
+
+<div class="c-section-header">
+
+  <% } %>
+
+<% if (pageMeta.name === 'order'){ %>
+
+  <h1 class="c-section-header__title">お持ち帰り<br>ご注文方法</h1>
+
+<% } else { %>
+
+  <h1 class="c-section-header__title"><%= pageMeta.titleJa %></h1>
+
+<% } %>
+
+</div>

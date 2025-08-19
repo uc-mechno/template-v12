@@ -1,0 +1,315 @@
+@charset "utf-8";
+@use 'sass:color';
+@use 'sass:map';
+
+/* Debug
+-------------------------------------------------------------- */
+
+/// @link https://shuu1104.com/2021/04/2520/
+
+$dbgMode: (
+  //  デバッグモード状態選択
+  //  0：OFF 1：ON 2:!important
+  color: 0,
+  bg: 0,
+  outline: 0
+);
+
+$outline: white;
+
+$dbgTag: (
+  body: (
+    color: white,
+    bg: #aaa,
+    outline: $outline,
+  ),
+  header: (
+    color: white,
+    bg: #f8a,
+    outline: $outline,
+  ),
+  main: (
+    color: white,
+    bg: #faf,
+    outline: $outline,
+  ),
+  article: (
+    color: white,
+    bg: #aff,
+    outline: $outline,
+  ),
+  section: (
+    color: white,
+    bg: #aaf,
+    outline: $outline,
+  ),
+  aside: (
+    color: white,
+    bg: #afa,
+    outline: $outline,
+  ),
+  footer: (
+    color: white,
+    bg: #faa,
+    outline: $outline,
+  ),
+  h1: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  h2: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  h3: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  h4: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  p: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  div: (
+    color: black,
+    bg: #eea,
+    outline: $outline,
+  ),
+  ul: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  li: (
+    color: black,
+    bg: none,
+    outline: $outline,
+  ),
+  a: (
+    color: black,
+    bg: #5ad,
+    outline: $outline,
+  ),
+  img: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  i: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  span: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  strong: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  big: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  small: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  em: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  ol: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  dl: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  dt: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  dd: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  table: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  tr: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  th: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  td: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  form: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  input: (
+    color: black,
+    bg: #eae,
+    outline: $outline,
+  ),
+  textarea: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  select: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  option: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  button: (
+    color: black,
+    bg: #e9e,
+    outline: $outline,
+  ),
+  figure: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  figcaption: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+  label: (
+    color: black,
+    bg: #aee,
+    outline: $outline,
+  ),
+  svg: (
+    color: black,
+    bg: white,
+    outline: $outline,
+  ),
+);
+
+$dbgClass: (
+  dbg1: (
+    color: black,
+    bg: tomato,
+    outline: $outline,
+  ),
+  dbg2: (
+    color: black,
+    bg: skyblue,
+    outline: $outline,
+  ),
+  dbg3: (
+    color: black,
+    bg: lightgreen,
+    outline: $outline,
+  ),
+  dbg4: (
+    color: black,
+    bg: tan,
+    outline: $outline,
+  ),
+  dbg5: (
+    color: black,
+    bg: lightpink,
+    outline: $outline,
+  ),
+);
+
+// mixin
+@mixin dbgColor($dbg: 0, $color: none) {
+  @if $dbg == 1 {
+    @if $color != none {
+      color: $color;
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $color != none {
+      color: $color !important;
+    }
+  }
+}
+
+@mixin dbgBg($dbg: 0, $bg: none) {
+  @if $dbg == 1 {
+    @if $bg != none {
+      background: color.scale(rgba($bg, 0), $alpha: 50%);
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $bg != none {
+      background: color.scale(rgba($bg, 0), $alpha: 50%) !important;
+    }
+  }
+}
+
+@mixin dbgOutline($dbg: 0, $outline: none) {
+  @if $dbg == 1 {
+    @if $outline != none {
+      outline: .5px solid color.scale(rgba($outline, 0), $alpha: 50%);
+    }
+  }
+
+  @if $dbg == 2 {
+    @if $outline != none {
+      outline: .5px solid color.scale(rgba($outline, 0), $alpha: 50%) !important;
+    }
+  }
+}
+
+// tag生成
+@each $tag, $data in $dbgTag {
+  #{$tag} {
+    @include dbgColor(map.get($dbgMode, 'color'), map.get(map.get($dbgTag, $tag), 'color'));
+    @include dbgBg(map.get($dbgMode, 'bg'), map.get(map.get($dbgTag, $tag), 'bg'));
+    @include dbgOutline(map.get($dbgMode, 'outline'), map.get(map.get($dbgTag, $tag), 'outline'));
+  }
+}
+
+// class生成
+@each $tag, $data in $dbgClass {
+  .#{$tag} {
+    @include dbgColor(1, map.get(map.get($dbgClass, $tag), 'color'));
+    @include dbgBg(1, map.get(map.get($dbgClass, $tag), 'bg'));
+    @include dbgOutline(1, map.get(map.get($dbgClass, $tag), 'outline'));
+  }
+}

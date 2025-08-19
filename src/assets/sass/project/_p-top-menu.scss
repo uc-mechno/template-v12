@@ -1,0 +1,114 @@
+@use '../global' as *;
+
+$menu-gap: rem(24);
+
+.p-top-menu {
+  padding-top: fluid-size(40, 120);
+  padding-bottom: fluid-size(40, 120);
+}
+
+.p-top-menu__inner {
+  max-width: $layout-width-canvas + strip-unit($padding-pc) * 2;
+  padding-right: 24px;
+  padding-left: 24px;
+  @include media(min, md) {
+    padding-left: rem(64);
+    padding-right: $padding-pc;
+  }
+}
+
+.p-top-menu__wrap {
+  direction: ltr;
+
+  @include media(min, md) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: rem(150) 1fr;
+  }
+}
+
+.p-top-menu__body {
+  margin-top: fluid-size(24, 32, 'md');
+  @include media(min, md) {
+    margin-top: 0;
+  }
+}
+
+.p-top-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: fluid-size(24, 32);
+}
+
+.p-top-menu-item {
+  aspect-ratio: 286/357;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: $base-radius;
+  flex-grow: 1;
+  flex-shrink: 0;
+  @include media(min, md) {
+    aspect-ratio: inherit;
+  }
+}
+
+.p-top-menu-item a {
+  @include hover {
+    opacity: 1;
+  }
+}
+
+.p-top-menu-item--1col {
+  flex-basis: 100%;
+  @include media(min, md) {
+    aspect-ratio: 879/357;
+  }
+}
+
+.p-top-menu-item--2col {
+  flex-basis: 100%;
+
+  @include media(min, md) {
+    flex-basis: calc(50% - $menu-gap);
+    aspect-ratio: 434/357;
+  }
+}
+
+.p-top-menu-item__title {
+  position: absolute;
+  z-index: map-get($layer, 'default');
+  top: fluid-size(24, 32);
+  left: fluid-size(24, 32);
+}
+
+.p-top-menu-item__heading {
+  font-weight: $font-weight-bold;
+  font-family: $base-font-family-serif-Vt;
+  writing-mode: vertical-rl;
+  color: $color-white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  font-size: fluid-size(28, 32);
+}
+
+.p-top-menu-item__img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map-get($layer, 'initial');
+}
+
+.p-top-menu-item__img img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s $ease-in-out;
+  @include hover {
+    transform: scale(1.08);
+  }
+}

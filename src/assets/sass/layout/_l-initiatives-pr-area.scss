@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.l-initiatives-pr-area {
+  padding-bottom: fluid-size(120, 200);
+
+  @include media(min, md) {
+    padding-bottom: 0;
+  }
+}

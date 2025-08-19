@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+/*
+## Breadcrumb
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: breadcrumb
+---
+
+```
+<div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+  <div class="l-inner">
+    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="トップページ" href="../" class="home"><span property="name">HOME</span></a>
+      <meta property="position" content="1">
+    </span> &nbsp;&gt;&nbsp; <span property="itemListElement" typeof="ListItem"><span property="name" class="takeout">鼓響のお持ち帰りメニュー</span>
+      <meta property="url" content="https://example.com/takeout">
+      <meta property="position" content="2">
+    </span>
+  </div>
+</div>
+
+```
+*/
+
+.c-breadcrumb {
+  margin-top: auto;
+  padding: rem(5) 0;
+  background-color: $base-color-sub;
+  font-size: rem(11);
+  border-top: 1px solid $color-accent-secondary;
+  border-bottom: 1px solid $color-accent-secondary;
+}
+
+.c-breadcrumb span {
+  font-size: rem(12);
+}

@@ -1,0 +1,36 @@
+@use "sass:math";
+// @link https://www.tribeck.jp/column/opinion/production/20200622/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  @for $i from 1 through 12 {
+    [class^="col#{$i}-"] {
+      width:calc(100% / #{$i});
+    }
+  }
+
+  @media ( min-width: 668px ) {
+
+    @for $i from 1 through 12 {
+      [class*="-#{$i}-"] {
+        width:calc(100% / #{$i});
+      }
+    }
+  }
+
+  @media ( min-width: 1025px ) {
+
+    @for $i from 1 through 12 {
+      [class$="-#{$i}"] {
+        width:calc(100% / #{$i});
+      }
+    }
+  }
+}

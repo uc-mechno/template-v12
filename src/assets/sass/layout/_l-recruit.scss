@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-recruit {
+  margin-top: rem(40);
+
+  @include media(min,md) {
+    margin-top: rem(70);
+  }
+}

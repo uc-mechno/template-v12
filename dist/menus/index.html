@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- ogp -->
+  <meta property="og:type" content="article" />
+  <title>鼓響の寿司メニュー</title>
+  <meta name="description" content="MENUSページディスクリプション" />
+  <meta property="og:title" content="鼓響の寿司メニュー" />
+  <meta property="og:description" content="MENUSページディスクリプション" />
+  <meta property="og:url" content="https://example.com/menus" />
+  <!-- ogp-image -->
+  <meta property="og:image" content="https://example.comassets/images/icon/ogp_default.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@traveler20site" />
+  <!-- ファビコン -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  <!-- v8 -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+  <!-- v9 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="../assets/css/bundle_static.css?ver=" />
+  <link rel="stylesheet" href="../assets/css/shame.css?ver=" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="../assets/js/libs/modernizr-custom.min.js"></script>
+  <script src="../assets/js/libs/Lazyestload.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script> -->
+  <!-- <script src="../assets/js/libs/vivus.min.js"></script> -->
+  <!-- v8 -->
+  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+  <!-- v9 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script defer src="../assets/js/bundle_static.js?ver="></script>
+  <!-- <script defer src="../assets/js/bundle.min.js?ver="></script> -->
+</head>
+<body class="l-body l-body--bg01">
+  <header class="l-header p-header p-header">
+    <div class="p-header__inner">
+      <div class="p-header__logo">
+        <a href="../" class="p-header__logoLink">
+          <img width="148" height="80" loading="eager" decoding="async" src="../assets/images/common/logo_header.svg" alt="廻る鼓響（こきょう） 回転寿司" />
+        </a>
+      </div>
+      <button type="button" id="js-hamburger" class="c-hamburger" aria-label="メニューを開く" aria-controls="js-gnav" aria-expanded="false">
+        <span class="c-hamburger__line" aria-hidden="true"></span>
+      </button>
+      <nav id="js-gnav" class="p-gnav" aria-label="メインメニュー">
+        <ul class="p-gnav__list" id="menu">
+          <li class="p-gnav__item delay-time05 blurTrigger"><a href="../menus" class="p-gnav__link" aria-current="page">メニュー</a></li>
+          <li class="p-gnav__item delay-time1 blurTrigger"><a href="../takeout" class="p-gnav__link">お持ち帰り</a></li>
+          <li class="p-gnav__item delay-time15 blurTrigger"><a href="../store" class="p-gnav__link">店舗情報</a></li>
+          <li class="p-gnav__item delay-time2 blurTrigger"><a href="../kodawari" class="p-gnav__link">鼓響のこだわり</a></li>
+          <li class="p-gnav__item delay-time25 blurTrigger"><a href="../initiatives" class="p-gnav__link">鼓響の取り組み</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- main -->
+  <main class="l-main">
+    <div class="p-menus-mv js-mv-height">
+      <div class="p-menus-mv__title">
+        <!-- 下層ページのメインビュー -->
+        <div class="c-section-header c-section-header--horizontal">
+          <h1 class="c-section-header__title">鼓響の寿司メニュー</h1>
+        </div>
+      </div>
+    </div>
+    <div class="p-menus-nav l-menus-nav" id="a">
+      <div class="p-menus-nav__inner l-inner">
+        <ul class="p-menus-nav__list">
+          <li class="p-menus-nav__item"><a href="#osusume">旬のおすすめ</a></li>
+          <li class="p-menus-nav__item"><a href="#zanmai">三昧盛り</a></li>
+          <li class="p-menus-nav__item"><a href="#teiban">定番にぎり</a></li>
+          <li class="p-menus-nav__item"><a href="#makimono">巻物・軍艦</a></li>
+          <li class="p-menus-nav__item"><a href="#aburi">炙り・びっくり寿司</a></li>
+          <li class="p-menus-nav__item"><a href="#ippin">一品料理</a></li>
+          <li class="p-menus-nav__item"><a href="#drink">ドリンク・デザート</a></li>
+          <li class="p-menus-nav__item"><a href="#lunch">ランチメニュー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-menus-takeout l-menus-takeout">
+      <div class="p-menus-takeout__inner l-inner">
+        <a href="../takeout">
+          <p class="p-menus-takeout__content"><img width="688" height="160" loading="lazy" decoding="async" src="../assets/images/bnr_takeout01.png" alt="お持ち帰りメニュー"></p>
+        </a>
+      </div>
+    </div>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="osusume">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--01 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">旬のおすすめ</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="zanmai">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--02 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">三昧盛り</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="teiban">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--03 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">定番にぎり</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="makimono">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--04 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">巻物・軍艦</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="aburi">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--05 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">炙り・びっくり寿司</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="ippin">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--06 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">一品料理</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--primary l-menus-sec" id="drink">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--07 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">ドリンク・デザート</h2>
+        </div>
+        <ul class="p-menus-sec__list js-accordion-area">
+          <!-- ループ処理開始 -->
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <li class="p-menus-sec__item">
+            <div class="p-menus-sec__img">
+              <img width="3" height="2" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu01.png.webp" alt="◯◯" />
+            </div>
+            <div class="p-menus-sec__body">
+              <h3 class="p-menus-sec__title-lv3">春の旬三昧</h3>
+              <p class="p-menus-sec__price">420円(税込462円)</p>
+              <p class="p-menus-sec__text">マスと真鯛、釜揚げしらすと旬が揃った３貫盛り</p>
+            </div>
+          </li>
+          <!-- ループ終了 -->
+        </ul>
+      </div>
+    </section>
+    <section class="p-menus-sec p-menus-sec--secondary l-menus-sec" id="lunch">
+      <div class="p-menus-sec__inner l-inner">
+        <div class="p-menus-sec__title-lv2-wrap p-menus-sec__title-lv2-wrap--08 js-accordion-title">
+          <h2 class="p-menus-sec__title-lv2">ランチメニュー</h2>
+        </div class="p-menus-sec__lead">
+        <div class="js-accordion-area">
+          <div class="p-menus-sec__lead-wrap">
+            <p class="p-menus-sec__lead">平日限定(AM11時～PM3時まで)の<br class="">ランチメニュー</p>
+          </div>
+          <ul class="p-menus-sec__list">
+            <!-- ループ処理開始 -->
+            <li class="p-menus-sec__item">
+              <div class="p-menus-sec__img">
+                <img width="16" height="9" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu02.jpg.webp" alt="◯◯ランチ" />
+              </div>
+              <div class="p-menus-sec__body">
+                <h3 class="p-menus-sec__title-lv3">限定ランチ</h3>
+                <p class="p-menus-sec__price">500円(税込550円)</p>
+                <dl class="p-menus-sec__defi-list">
+                  <dt class="p-menus-sec_term">◆セット内容</dt>
+                  <dd class="p-menus-sec__desc"> ・握り（8貫）<br> ・みそ汁（日替り）<br> ※1日20食限定 </dd>
+                </dl>
+              </div>
+            </li>
+            <li class="p-menus-sec__item">
+              <div class="p-menus-sec__img">
+                <img width="16" height="9" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu02.jpg.webp" alt="◯◯ランチ" />
+              </div>
+              <div class="p-menus-sec__body">
+                <h3 class="p-menus-sec__title-lv3">限定ランチ</h3>
+                <p class="p-menus-sec__price">500円(税込550円)</p>
+                <dl class="p-menus-sec__defi-list">
+                  <dt class="p-menus-sec_term">◆セット内容</dt>
+                  <dd class="p-menus-sec__desc"> ・握り（8貫）<br> ・みそ汁（日替り）<br> ※1日20食限定 </dd>
+                </dl>
+              </div>
+            </li>
+            <li class="p-menus-sec__item">
+              <div class="p-menus-sec__img">
+                <img width="16" height="9" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu02.jpg.webp" alt="◯◯ランチ" />
+              </div>
+              <div class="p-menus-sec__body">
+                <h3 class="p-menus-sec__title-lv3">限定ランチ</h3>
+                <p class="p-menus-sec__price">500円(税込550円)</p>
+                <dl class="p-menus-sec__defi-list">
+                  <dt class="p-menus-sec_term">◆セット内容</dt>
+                  <dd class="p-menus-sec__desc"> ・握り（8貫）<br> ・みそ汁（日替り）<br> ※1日20食限定 </dd>
+                </dl>
+              </div>
+            </li>
+            <li class="p-menus-sec__item">
+              <div class="p-menus-sec__img">
+                <img width="16" height="9" loading="lazy" decoding="async" src="../assets/images/common/dummy_menu02.jpg.webp" alt="◯◯ランチ" />
+              </div>
+              <div class="p-menus-sec__body">
+                <h3 class="p-menus-sec__title-lv3">限定ランチ</h3>
+                <p class="p-menus-sec__price">500円(税込550円)</p>
+                <dl class="p-menus-sec__defi-list">
+                  <dt class="p-menus-sec_term">◆セット内容</dt>
+                  <dd class="p-menus-sec__desc"> ・握り（8貫）<br> ・みそ汁（日替り）<br> ※1日20食限定 </dd>
+                </dl>
+              </div>
+            </li>
+            <!-- ループ終了 -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- パンくず -->
+    <div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+      <div class="l-inner">
+        <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="トップページ" href="../" class="home"><span property="name">HOME</span></a>
+          <meta property="position" content="1">
+        </span> &nbsp;&gt;&nbsp; <span property="itemListElement" typeof="ListItem"><span property="name" class="menus">鼓響の寿司メニュー</span>
+          <meta property="url" content="https://example.com/menus">
+          <meta property="position" content="2">
+        </span>
+      </div>
+    </div>
+  </main>
+  <!-- /main -->
+  <footer class="l-footer p-footer">
+    <div class="c-to-top js-page-top">
+      <a href="#top"><span></span></a>
+    </div>
+    <div class="p-footer__inner l-inner">
+      <div class="p-footer__item-wrap">
+        <div class="p-footer__item-left">
+          <div class="p-footer__logo">
+            <a href="../">
+              <img width="121" height="45" loading="lazy" decoding="async" src="../assets/images/common/logo_footer01.svg" alt="廻る鼓響（こきょう）吉田店" />
+            </a>
+          </div>
+          <div class="p-footer-address-wrap">
+            <address class="p-footer-address">
+              <p class="p-footer-address__shop">廻る鼓響 吉田店<br>新潟県燕市吉田3520-1</p>
+              <p class="p-footer-address__tel">TEL:<span>0256-92-5414</span></p>
+            </address>
+            <p class="p-footer-address__map"><a target="_blank" href="https://goo.gl/maps/56AoYokmUTmZDUmm8">Googleマップ</a></p>
+            <p class="p-footer-address__line">
+              <a target="_blank" href="https://lin.ee/wy3gtSs"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" /></a>
+            </p>
+          </div>
+        </div>
+        <div class="p-footer__item-center">
+          <div class="p-footer__logo">
+            <a href="../">
+              <img width="147" height="39" loading="lazy" decoding="async" src="../assets/images/common/logo_footer02.svg" alt="回転寿司鼓響（こきょう）燕三条店" />
+            </a>
+          </div>
+          <div class="p-footer-address-wrap">
+            <address class="p-footer-address">
+              <p class="p-footer-address__shop">回転寿司鼓響 燕三条店<br>新潟県三条市須頃2-110-1</p>
+              <p class="p-footer-address__tel">TEL:<span>0256-64-8263</span></p>
+            </address>
+            <p class="p-footer-address__map"><a target="_blank" href="https://goo.gl/maps/dWi2XdfRAgUEQaSp7">Googleマップ</a></p>
+            <p class="p-footer-address__line">
+              <a target="_blank" href="https://lin.ee/hhwxfs7"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" /></a>
+            </p>
+          </div>
+        </div>
+        <div class="p-footer__item-right p-footer-nav">
+          <ul class="p-footer-nav__list">
+            <li class="p-footer-nav__item">
+              <a href="../menus">メニュー</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a href="../takeout">お持ち帰り</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a href="../store">店舗情報</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a href="../kodawari">鼓響のこだわり</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a href="../initiatives">鼓響の取り組み</a>
+            </li>
+          </ul>
+          <p class="l-button l-button--center">
+            <a href="https://dmrotyvp.jbplt.jp/" class="c-button c-button--icon01 c-button--sm" href="">採用情報</a>
+          </p>
+        </div>
+      </div>
+      <div class="p-footer__copyright">
+        <small>Copyrights ©廻る鼓響 All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

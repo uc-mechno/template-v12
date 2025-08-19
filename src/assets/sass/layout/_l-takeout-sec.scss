@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+.l-takeout-sec {
+  padding-top: fluid-size(40, 80);
+  padding-bottom: fluid-size(40, 80);
+
+  &:last-of-type {
+    padding-bottom: fluid-size(120, 180);
+  }
+}

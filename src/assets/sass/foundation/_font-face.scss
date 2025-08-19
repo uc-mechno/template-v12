@@ -1,0 +1,10 @@
+@use '../global' as *;
+
+/* Font Face
+-------------------------------------------------------------- */
+
+@include font-face('Noto Serif JP Vertical', '../fonts/NotoSerifJP-Vt-Regular', 400, normal, swap, woff woff2 otf);
+@include font-face('Noto Serif JP Vertical', '../fonts/NotoSerifJP-Vt-Bold', 700, bold, swap, woff woff2 otf);
+@include font-face('Noto Sans JP', '../fonts/NotoSansJP-Regular', 400, normal, swap, woff woff2 otf);
+@include font-face('Noto Sans JP', '../fonts/NotoSansJP-Bold', 700, bold, swap, woff woff2 otf);
+@include font-face('Noto Sans JP', '../fonts/NotoSansJP-Bold', 700, bold, swap, woff woff2 otf);

@@ -1,0 +1,78 @@
+@use 'global' as *;
+
+/*
+## Card
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: card
+---
+
+```
+<article class="c-card">
+  <a href="">
+    <div class="c-card__img">
+      <img width="750" height="490" src="" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy">
+    </div>
+    <div class="c-card__body c-card__body--secondar">
+      <time datetime="2023-04-18" class="c-card__date">2023.04.18</time>
+      <p class="c-card__text c-card__text--secondary">旬の素材を使用した春の厳選メニューが勢揃い！</p>
+    </div>
+  </a>
+</article>
+```
+*/
+
+.c-card {
+  @include media(max, md) {
+    border-bottom: 1px solid $color-accent-secondary;
+    padding-bottom: fluid-size(16, 24);
+  }
+}
+
+.c-card__img {
+  aspect-ratio: 3 / 2;
+}
+
+.c-card__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.c-card__body {
+  padding: fluid-size(8, 16);
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card__body--primary {
+  background-color: $color-white;
+}
+
+.c-card__body--secondary {
+  background-color: transparent;
+}
+
+.c-card__date {
+  color: $color-accent-secondary;
+  font-family: $base-font-family-serif;
+  font-size: rem(12);
+  line-height: $line-height-none;
+}
+
+.c-card__text {
+  margin-top: rem(8);
+  font-size: fluid-size(16, 20);
+  font-family: $base-font-family-serif;
+  @include lh($base-line-height);
+}
+
+.c-card__text--primary {
+  color: $color-black;
+}
+
+.c-card__text--secondary {
+  color: $color-white;
+}

@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.p-news-archive {
+  background-color: $base-color-main;
+  padding-bottom: fluid-size(48, 80);
+}
+
+.p-news-archive__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: fluid-size(24, 48);
+  column-gap: fluid-size(16, 24);
+
+  @include media(min, md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

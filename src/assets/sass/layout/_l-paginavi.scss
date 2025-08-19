@@ -1,0 +1,6 @@
+@use 'global' as *;
+
+.l-paginavi {
+  background-color: $base-color-main;
+  padding-bottom: fluid-size(120, 200);
+}

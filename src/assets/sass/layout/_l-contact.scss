@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.l-contact {
+  margin-top: rem(80);
+
+  @include media(min,md) {
+    margin-top: rem(110);
+  }
+}
+
+.l-contact--mt0 {
+  margin-top: 0;
+}

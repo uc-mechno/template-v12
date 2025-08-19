@@ -1,0 +1,39 @@
+@use 'head';
+// @use 'l-row';
+// libに一旦移動
+@use 'l-body';
+@use 'l-wrapper';
+@use 'l-splash';
+@use 'l-footer';
+@use 'l-container';
+@use 'l-section';
+@use 'l-block';
+@use 'l-inner';
+@use 'l-unit';
+@use 'l-button';
+
+@use 'l-page-header';
+
+@use 'l-menus-nav';
+@use 'l-menus-bnr';
+@use 'l-menus-takeout';
+@use 'l-menus-sec';
+
+@use 'l-takeout-sec';
+
+@use 'l-order-sec';
+
+@use 'l-store-sec';
+
+@use 'l-kodawari-pr-area';
+@use 'l-kodawari-sec';
+
+@use 'l-initiatives-pr-area';
+@use 'l-initiatives-sec';
+
+@use 'l-paginavi';
+
+@use 'l-page-link';
+
+@use 'l-news-archive';
+@use 'l-news-single-body';

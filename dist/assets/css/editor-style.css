@@ -1,0 +1,157 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Serif JP", serif;
+}
+
+p {
+  font-size: 0.875rem;
+}
+p::before, p::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+p::before {
+  margin-top: calc((1 - 1.6) * 0.5em);
+}
+p::after {
+  margin-bottom: calc((1 - 1.6) * 0.5em);
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+h1::before, h1::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h1::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h1::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+h2::before, h2::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h2::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h2::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+h3::before, h3::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h3::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h3::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+h4 {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+h4::before, h4::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h4::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h4::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+h5::before, h5::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h5::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h5::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+h6 {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+h6::before, h6::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+h6::before {
+  margin-top: calc((1 - 1.4) * 0.5em);
+}
+h6::after {
+  margin-bottom: calc((1 - 1.4) * 0.5em);
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+figure,
+.wp-block-buttons,
+details,
+.wp-block-verse,
+.wp-block-file,
+.wp-block-media-text {
+  margin-top: 2.5rem;
+}
+
+a {
+  color: #8e5b06;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=sourcemaps/editor-style.css.map */
