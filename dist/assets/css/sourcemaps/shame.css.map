@@ -1,1 +1,0 @@
-{"version":3,"sources":["shame.scss"],"names":[],"mappings":"AAEA;;;;EAAA","file":"shame.css","sourcesContent":["@use 'global' as *;\n\n/**\n * Shame\n *\n * This file is for quick fixes and hacks that need to be made.\n */\n"]}
