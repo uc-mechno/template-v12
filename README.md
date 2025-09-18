@@ -392,24 +392,6 @@ logo01_sp.jpg
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-## 余白のルール
-- 余白は基本トップ、レフト
-- marginは兄弟要素
-- paddingは親子要素
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-## 連番のルール
-- test-test01←01はつけない
-- test-test02
-- test-test03
-
-- test-test
-- test-test02
-- test-test03
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
 ## editorconfigの設定例
 ```
 // https://dezanari.com/editorconfig/
