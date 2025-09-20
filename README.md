@@ -1,4 +1,4 @@
-# template-v11
+# template-v12
 
 ## gulpテンプレート - 静的サイト＆WordPressオリジナルテーマ制作用
 
