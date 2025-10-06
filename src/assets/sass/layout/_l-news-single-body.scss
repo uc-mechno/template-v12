@@ -1,9 +1,0 @@
-@use 'global' as *;
-
-.l-news-single-body {
-  padding-bottom: fluid-size(120, 200);
-}
-
-.l-news-single-body__inner {
-  max-width: $layout-width-single + strip-unit($padding-pc) * 2;
-}

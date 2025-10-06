@@ -15,9 +15,6 @@
 }
 
 @keyframes blurAnime {
-  /// ios safariでfilterをかけるとバグるので、will-changeを使う
-  /// will-changeが使えないブラウザは、transform: translateZ(0);を使う
-  /// @link https://qiita.com/siy1121/items/d5a5f198744cf882ef02
   from {
     filter: blur(10px);
     will-change: filter;

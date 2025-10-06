@@ -29,28 +29,12 @@ title: hamburger
 
   &.is-fixed {
     border-radius: 50%;
-    // border: 1px solid rgba(255, 255, 255, 0.5);
     border: 1px solid $color-accent-secondary;
     position: fixed;
     top: rem(10);
     right: rem(12);
     background-color: $color-white;
-    // box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
-    // @include focus-style {
-    //   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
-    //   border: 1px solid $color-accent-secondary;
-    //   border-radius: 50%;
-    // }
   }
-
-  // @include focus-style {
-  //   box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
-  //   border: 1px solid #fff;
-  //   border-radius: 50%;
-  // }
-  // @include hover-style(false) {
-  //   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.8);
-  // }
 
   &:focus-visible {
     border: 1px solid $base-color-accent;

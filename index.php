@@ -1,7 +1,3 @@
-<?php /*
-wp_safe_redirect( home_url() );
-exit;
-*/ ?>
 <?php get_header(); ?>
 <main class="l-main">
   <div class="l-page-header l-page-header--vertical js-mv-height">

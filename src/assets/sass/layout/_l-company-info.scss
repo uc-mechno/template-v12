@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.l-company-info {
-  margin-top: rem(80);
-
-  @include media(min,md) {
-    margin-top: rem(140);
-  }
-}
