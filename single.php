@@ -32,12 +32,6 @@ $cat_link = get_category_link($cat_id);
         </div>
       </div>
 
-      <?php /* if (CFS()->get('eye_catche')) : ?>
-        <div class="p-news-single-body__img">
-          <?php echo get_eyecatch_default(get_the_ID(), 'full', 'eager'); ?>
-        </div>
-      <?php endif; */ ?>
-
       <div <?php post_class('p-news-single-content js-blurTrigger is-show'); ?>>
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
@@ -89,29 +83,6 @@ $cat_link = get_category_link($cat_id);
             <?php endif; ?>
           </div>
         </div>
-
-        <?php /*
-
-        <div class="c-page-link">
-          <div class="c-page-link__inner">
-
-            <div class="c-page-link__flex">
-              <div class="c-page-link__prev">
-                <a href="">前の記事</a>
-              </div>
-              <div class="c-page-link__next">
-                <a href="">次の記事</a>
-              </div>
-            </div>
-
-            <div class="c-page-link__archive">
-              <a href="../../news">お知らせ一覧</a>
-            </div>
-
-          </div>
-        </div>
-
-*/ ?>
 
       </div>
     </div>

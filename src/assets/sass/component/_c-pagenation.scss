@@ -36,14 +36,7 @@ title: pagenation
   color: $color-white;
   background-color: $base-color-main;
   border: 1px solid $color-accent-secondary;
-  // transition: .3s ease;
 }
-
-// .c-pagenation a:hover {
-//   color: #4f31a5;
-//   background-color: #f1ebf8;
-//   opacity: 1;
-// }
 
 .c-pagenation .wp-pagenavi span.current {
   background-color: $color-accent-secondary;

@@ -10,7 +10,7 @@ title: heading
 ---
 
 ```
-<h2 class="c-heading">おすすめ企画<br>限定メニュー</h2>
+<h2 class="c-heading">タイトル</h2>
 ```
 */
 
@@ -43,15 +43,6 @@ title: heading
   }
 }
 
-// .c-heading--br {
-//   @include media(min, md) {
-
-//     br {
-//       display: none;
-//     }
-//   }
-// }
-
 .c-heading--lv2 {
   font-size: fluid-size(24, 28);
 }
@@ -62,13 +53,4 @@ title: heading
 
 .c-heading--lv2--secondary {
   font-size: fluid-size(20, 28);
-}
-
-.c-heading--lv3 {
-}
-
-.c-heading--lv3--primary {
-}
-
-.c-heading--lv3--secondary {
 }
