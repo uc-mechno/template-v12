@@ -1,0 +1,23 @@
+<% const path='./' ; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- meta -->
+    <%- include(path + '_common/_head' ,{path:path, pageMeta:global.pageMeta['home'], }) %>
+  </head>
+
+  <body class="l-body">
+
+    <div class="l-wrapper">
+
+      <%- include(path + '_common/_header' ,{path:path,}) %>
+
+      <!-- main -->
+      <main class="l-main"></main>
+      <!-- /main -->
+
+      <%- include(path + '_common/_footer' ,{path:path,}) %>
+    </div>
+  </body>
+</html>

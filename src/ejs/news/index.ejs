@@ -1,0 +1,52 @@
+<%_ const path='../'; _%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- pageMeta -->
+    <%- include(path + '_common/_head', { path:path,pageMeta:global.pageMeta['news'],}) %>
+  </head>
+  <body class="l-body l-body--bg01">
+    <%- include(path + '_common/_header',{ path:path, modifier:'--bg' }) %>
+
+    <!-- main -->
+    <main class="l-main">
+      <div class="p-news-archive-mv js-mv-height">
+        <div class="p-news-archive-mv__title">
+          <!-- 下層ページのメインビュー -->
+          <%- include(path + '_component/_mv', { path:path, pageMeta:global.pageMeta['news'], modifier:'--vertical' }) %>
+        </div>
+      </div>
+
+      <div class="p-news-archive l-news-archive">
+        <div class="p-news-archive__inner l-inner">
+          <div class="p-news-archive__list">
+
+          <!-- ループ処理開始 -->
+          <%- include(path + '_component/_news-archive',{
+            path:path,
+            pageMeta:global.pageMeta['news']
+          }) %>
+          <!-- ループ終了 -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="l-paginavi">
+        <div class="c-pagenation">
+          <div class="wp-pagenavi">
+            <span class="current">1</span>
+            <a class="page smaller" href="#">2</a>
+            <a class="page smaller" href="#">3</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- パンくず -->
+      <%- include(path + '_component/_breadcrumb', { path:path, pageMeta:global.pageMeta['initiatives'], }) %>
+    </main>
+    <!-- /main -->
+
+    <%- include(path + '_common/_footer',{path:path,}) %>
+  </body>
+</html>

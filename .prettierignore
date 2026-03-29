@@ -1,0 +1,10 @@
+node_modules
+package.json
+package-lock.json
+yarn.lock
+# assets/css/libs/**.css
+# assets/js/libs/**.js
+**.md
+
+_start.js
+_end.js

@@ -1,0 +1,67 @@
+{
+  // "stylelint.validate": ["css", "scss"], // プラグインstylelint-piusではなくstylelintの設定
+  "scss.validate": false, //VS CodeのビルトインのLint機能を停止する
+  "css.validate": false, //VS CodeのビルトインのLint機能を停止する
+  "editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit"
+	},
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトのフォーマッタ
+  "prettier.ignorePath": "../.prettierignore", // 除外ファイルのパス
+  "stylelint.autoFixOnSave": true, //保存時にフォーマットする
+  "[css]": {
+    "editor.formatOnSave": false // cssファイルは保存時にフォーマットしない
+  },
+  "[scss]": {
+    "editor.formatOnSave": true // scssファイルは保存時にフォーマットする
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false // markdownファイルは保存時にフォーマットしない
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "emmet.includeLanguages": {
+    //EMMETの設定
+    "ejs": "html",
+    "nunjucks": "html"
+  },
+  "cSpell.ignorePaths": [
+    // スペルチェック除外
+    "**/package.json",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/node_modules/**",
+    "**/webpack.config.js",
+    "**/.vscode/",
+    "**/settings.json",
+    "**/gulpfile.js"
+    // "src/js/libs",
+    // "src/scss/libs"
+  ],
+  "liveSassCompile.settings.autoprefix": [
+    // ベンダープレフィックス
+    "last 2 version",
+    "not dead",
+    "not IE 11"
+  ],
+  "liveSassCompile.settings.excludeList": [
+    // 除外ファイル
+    "/**/node_modules/**",
+    "/.vscode/**",
+    "/src/assets/sass/**"
+  ],
+  "liveSassCompile.settings.generateMap": true, // mapファイル
+  "liveSassCompile.settings.formats": [
+    // Sassの出力内容の設定
+    {
+      "format": "expanded", // nested、compact、compressedのどれかを選ぶ
+      "extensionName": ".css", // style.cssとして出力
+      "savePath": "/css" // cssフォルダの中にstyle.cssを出力
+    }
+  ],
+  "liveSassCompile.settings.showOutputWindowOn": "Information", // エラーログ出力
+  "livePreview.autoRefreshPreview": "On Changes to Saved Files", // ファイルを保存したときにプレビューを自動的に更新
+  "livePreview.debugOnExternalPreview": false, // 外部のプレビューウィンドウでタスクを実行するかどうか
+  "livePreview.openPreviewTarget": "External Browser", // 外部プレビュー優先
+  "livePreview.tasks.runTaskWithExternalPreview": false // 外部のプレビューウィンドウでデバッグを有効にするかどうか
+}

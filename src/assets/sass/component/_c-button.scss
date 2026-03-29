@@ -1,0 +1,141 @@
+@use 'global' as *;
+
+/*
+## Button
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: button
+---
+
+```
+<a class="c-button" href=""></a>
+```
+*/
+
+.c-button {
+  text-align: center;
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: rem(16) rem(16);
+  width: 100%;
+}
+
+.c-button--xs {
+  max-width: 380px;
+}
+
+.c-button--sm {
+  max-width: 480px;
+}
+
+.c-button--md {
+  max-width: 680px;
+}
+
+.c-button--lg {
+  max-width: 750px;
+}
+
+.c-button--icon01 {
+  border: 1px solid $color-white;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    margin: -(rem(3)) rem(5) 0 0;
+    background: url('#{$pathImages}/common/icon01.svg') no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+  }
+}
+
+.c-button--icon02 {
+  border: 1px solid $color-accent-secondary;
+  background-color: $base-color-main;
+  padding-top: fluid-size(16, 30);
+  padding-bottom: fluid-size(16, 30);
+  font-size: fluid-size(16, 24);
+  font-family: $base-font-family-serif;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    background: url('#{$pathImages}/common/icon02.svg') no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    aspect-ratio: 1 / 1;
+    width: fluid-size(16, 24);
+    margin: -(rem(3)) 0 0 fluid-size(16, 24);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include focus-style() {
+    border-color: #fff;
+  }
+}
+
+.c-button--accent {
+  font-size: fluid-size(16, 24);
+  font-family: $base-font-family-serif;
+  background-color: $base-color-accent;
+  border-radius: 8px;
+  line-height: $line-height-none;
+  padding: fluid-size(24, 32);
+
+  @include focus-style() {
+    border-color: #fff;
+  }
+}
+
+.c-button--primary {
+  font-size: fluid-size(16, 24);
+  font-family: $base-font-family-serif;
+  background-color: $base-color-main;
+  border-radius: 8px;
+  line-height: $line-height-none;
+  padding: fluid-size(24, 32);
+
+  @include focus-style() {
+    border-color: #fff;
+  }
+}
+
+.c-button--secondary {
+  font-size: fluid-size(16, 24);
+  font-family: $base-font-family-serif;
+  background-color: $color-base-secondary;
+  color: $base-color-accent;
+  border-radius: 8px;
+  line-height: $line-height-none;
+  padding: fluid-size(24, 32);
+
+  @include focus-style() {
+    border-color: $base-color-accent;
+  }
+}
+
+.c-button--icon {
+  background-image: url('#{$pathImages}/common/icon04.svg');
+  background-repeat: no-repeat;
+  background-position: center right fluid-size(16, 24);
+  background-size: fluid-size(16, 24);
+}
+
+.c-button--br {
+  line-height: $line-height-md;
+  @include lh($line-height-md);
+  padding: fluid-size(16, 24) fluid-size(24, 32);
+
+  @include focus-style() {
+    border-color: #fff;
+  }
+}

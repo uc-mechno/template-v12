@@ -1,0 +1,51 @@
+@use 'global' as *;
+
+/*
+## Section Header
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: section-header
+---
+
+```
+<div class="c-section-header">
+  <h1 class="c-section-header__title">お持ち帰りメニュー</h1>
+</div>
+```
+*/
+
+.c-section-header {
+  border: 2px solid $color-accent-secondary;
+  background-color: $base-color-main;
+}
+
+.c-section-header__title {
+  color: $color-white;
+  font-weight: $font-weight-bold;
+  font-size: fluid-size(20, 24);
+}
+
+.c-section-header--horizontal {
+  font-family: $base-font-family-serif;
+  padding: fluid-size(8, 32);
+  width: fluid-size(212, 720);
+  text-align: center;
+
+  .c-section-header__title {
+    line-height: $line-height-none;
+  }
+}
+
+.c-section-header--vertical {
+  font-family: $base-font-family-serif-Vt;
+  writing-mode: vertical-rl;
+  padding: fluid-size(36, 36) fluid-size(16, 16) fluid-size(16, 16);
+  @include margin-auto;
+
+  .c-section-header__title {
+    text-indent: -1em;
+    line-height: $line-height-sm;
+  }
+}

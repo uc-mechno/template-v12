@@ -1,0 +1,23 @@
+<div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+  <div class="l-inner">
+
+    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="トップページ" href="<%= path %>" class="home"><span property="name">HOME</span></a><meta property="position" content="1"></span>
+
+    &nbsp;&gt;&nbsp;
+
+    <% if(pageMeta.name === 'order' ){ %>
+
+    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<%= pageMeta.parent['titleJa'] %>" href="<%= pageMeta.parent['url'] %>" class=""><span property="name" class="<%= pageMeta.parent['name'] %>"><%= pageMeta.parent['titleJa']%></span><meta property="url" content="<%= global.siteUrl + pageMeta.parent['url'] %>"></a><meta property="position" content="2"></span>
+
+    &nbsp;&gt;&nbsp;
+
+    <span property="itemListElement" typeof="ListItem"><span property="name" class="<%= pageMeta.name%>"><%= pageMeta.titleJa%></span><meta property="url" content="<%= global.siteUrl + pageMeta.url %>"><meta property="position" content="3"></span>
+
+    <% } else { %>
+
+    <span property="itemListElement" typeof="ListItem"><span property="name" class="<%= pageMeta.name%>"><%= pageMeta.titleJa%></span><meta property="url" content="<%= global.siteUrl + pageMeta.url %>"><meta property="position" content="2"></span>
+
+    <% } %>
+
+  </div>
+</div>

@@ -1,0 +1,108 @@
+@use "global/" as *;
+
+@for $value from 1 through 5 {
+  .u-mt#{$value * 8} {
+    margin-top: 8px * $value $important;
+  }
+
+  .u-mr#{$value * 8} {
+    margin-right: 8px * $value $important;
+  }
+
+  .u-mb#{$value * 8} {
+    margin-bottom: 8px * $value $important;
+  }
+
+  .u-ml#{$value * 8} {
+    margin-left: 8px * $value $important;
+  }
+
+  // @include media(min, sm) {
+  //   .u-sm-mt#{$value * 8} {
+  //     margin-top: 8px * $value $important;
+  //   }
+
+  //   .u-sm-mr#{$value * 8} {
+  //     margin-right: 8px * $value $important;
+  //   }
+
+  //   .u-sm-mb#{$value * 8} {
+  //     margin-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-sm-ml#{$value * 8} {
+  //     margin-left: 8px * $value $important;
+  //   }
+  // }
+
+  // @include media(min, md) {
+  //   .u-md-mt#{$value * 8} {
+  //     margin-top: 8px * $value $important;
+  //   }
+
+  //   .u-md-mr#{$value * 8} {
+  //     margin-right: 8px * $value $important;
+  //   }
+
+  //   .u-md-mb#{$value * 8} {
+  //     margin-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-md-ml#{$value * 8} {
+  //     margin-left: 8px * $value $important;
+  //   }
+  // }
+
+  // @include media(min, lg) {
+  //   .u-lg-mt#{$value * 8} {
+  //     margin-top: 8px * $value $important;
+  //   }
+
+  //   .u-lg-mr#{$value * 8} {
+  //     margin-right: 8px * $value $important;
+  //   }
+
+  //   .u-lg-mb#{$value * 8} {
+  //     margin-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-lg-ml#{$value * 8} {
+  //     margin-left: 8px * $value $important;
+  //   }
+  // }
+
+  // @include media(min, xl) {
+  //   .u-xl-mt#{$value * 8} {
+  //     margin-top: 8px * $value $important;
+  //   }
+
+  //   .u-xl-mr#{$value * 8} {
+  //     margin-right: 8px * $value $important;
+  //   }
+
+  //   .u-xl-mb#{$value * 8} {
+  //     margin-bottom: 8px * $value $important;
+  //   }
+
+  //   .u-xl-ml#{$value * 8} {
+  //     margin-left: 8px * $value $important;
+  //   }
+  // }
+
+}
+
+.u-mt0 {
+  margin-top: 0 $important;
+}
+
+.u-mr0 {
+  margin-right: 0 $important;
+}
+
+.u-mb0 {
+  margin-bottom: 0 $important;
+}
+
+.u-ml0 {
+  margin-left: 0 $important;
+}

@@ -1,0 +1,25 @@
+@use 'global' as *;
+
+.l-button {
+}
+
+.l-button--center {
+  text-align: center;
+}
+
+.l-button--mt-md {
+  margin-top: fluid-size(24, 48);
+}
+
+.l-button--cols2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include media(min, md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.l-button--gap-md {
+  gap: fluid-size(32, 48);
+}

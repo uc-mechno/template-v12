@@ -1,0 +1,54 @@
+{
+  "global": {
+    "siteName": "サンプルサイト",
+    "siteUrl": "https://example.com",
+    "pageMeta": {
+      "home": {
+        "id": "1",
+        "name": "home",
+        "titleEn": "TOP PAGE",
+        "titleJa": "トップページ",
+        "description": "トップページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "website",
+        "url": "/"
+      },
+      "work": {
+        "id": "2",
+        "name": "work",
+        "titleEn": "WORK",
+        "titleJa": "下層ページタイトル",
+        "description": "WORKページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/work"
+      },
+      "news": {
+        "id": "",
+        "name": "news",
+        "titleEn": "NEWS",
+        "titleJa": "お知らせ",
+        "description": "NEWSページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/news"
+      },
+      "news01": {
+        "id": "4",
+        "name": "news01",
+        "titleEn": "NEWS",
+        "titleJa": "お知らせ",
+        "description": "NEWS01ページディスクリプション",
+        "ogpImage": "assets/images/icon/ogp_default.jpg",
+        "type": "article",
+        "url": "/news/news01",
+        "parent" :{
+          "name": "news",
+          "titleEn": "NEWS",
+          "titleJa": "お知らせ",
+          "url": "/news"
+        }
+      }
+    }
+  }
+}

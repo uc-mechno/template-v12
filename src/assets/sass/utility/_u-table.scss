@@ -1,0 +1,12 @@
+@use "global/" as *;
+
+.u-table-wrap {
+
+  & > table {
+    width: 100%;
+  }
+
+  &.u-table-wrap--responsive {
+    overflow-x: auto;
+  }
+}

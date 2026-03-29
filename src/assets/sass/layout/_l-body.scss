@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.l-body {
+}
+
+.l-body--bg01 {
+  background-image: url('#{$pathImages}/common/bg01.svg');
+  background-repeat: repeat;
+}

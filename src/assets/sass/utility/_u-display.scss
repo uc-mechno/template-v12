@@ -1,0 +1,89 @@
+@use 'global/' as *;
+
+.u-xs-hidden {
+  display: initial $important;
+
+  @include media(min, xs) {
+    display: none $important;
+  }
+}
+
+.u-sm-hidden {
+  display: initial $important;
+
+  @include media(min, sm) {
+    display: none $important;
+  }
+}
+
+.u-md-hidden {
+  display: initial $important;
+
+  @include media(min, md) {
+    display: none $important;
+  }
+}
+
+.u-lg-hidden {
+  display: initial $important;
+
+  @include media(min, lg) {
+    display: none $important;
+  }
+}
+
+.u-xl-hidden {
+  display: initial $important;
+
+  @include media(min, xl) {
+    display: none $important;
+  }
+}
+
+.u-xs-show {
+  display: none $important;
+
+  @include media(min, xs) {
+    display: initial $important;
+  }
+}
+
+.u-sm-show {
+  display: none $important;
+
+  @include media(min, sm) {
+    display: initial $important;
+  }
+}
+
+.u-md-show {
+  display: none $important;
+
+  @include media(min, md) {
+    display: initial $important;
+  }
+}
+
+.u-lg-show {
+  display: none $important;
+
+  @include media(min, lg) {
+    display: initial $important;
+  }
+}
+
+.u-xl-show {
+  display: none $important;
+
+  @include media(min, xl) {
+    display: initial $important;
+  }
+}
+
+// .u-xxl-show {
+//   display: none;
+
+//   @include media("xxl") {
+//     display: initial;
+//   }
+// }

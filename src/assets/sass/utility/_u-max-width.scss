@@ -1,0 +1,11 @@
+@use "global/" as *;
+
+@for $value from 1 through 20 {
+  .u-max-width#{$value * 5} {
+    width: 5% * $value $important;
+  }
+}
+
+.u-max-width-none {
+  max-width: none $important;
+}

@@ -1,0 +1,68 @@
+@use 'head';
+
+@use 'p-header';
+@use 'p-gnav';
+@use 'p-footer-nav';
+@use 'p-footer';
+
+@use 'p-top-mv-swiper';
+@use 'p-top-mv';
+@use 'p-top-gentei';
+@use 'p-top-news';
+@use 'p-top-bg';
+@use 'p-top-menu';
+@use 'p-top-pickup';
+@use 'p-top-menu-cat';
+@use 'p-top-menu-other';
+@use 'p-top-pr-area';
+@use 'p-top-kodawari';
+@use 'p-top-initiatives';
+@use 'p-top-osusume';
+@use 'p-top-sdgs';
+@use 'p-top-info-area';
+@use 'p-top-recruit';
+
+@use 'p-menus-nav';
+@use 'p-menus-sec';
+
+@use 'p-osusume-bg';
+@use 'p-osusume-sec';
+
+@use 'p-takeout-sec01';
+@use 'p-takeout-sec02';
+@use 'p-takeout-sec03';
+@use 'p-takeout-sec04';
+
+@use 'p-order-sec01';
+@use 'p-order-sec02';
+@use 'p-order-sec03';
+@use 'p-order-sec04';
+@use 'p-order-sec05';
+
+@use 'p-store-sec01';
+@use 'p-store-sec02';
+@use 'p-store-sec03';
+@use 'p-store-sec04';
+@use 'p-store-sec05';
+
+@use 'p-kodawari-lead';
+@use 'p-kodawari-pr-area';
+@use 'p-kodawari-sec01';
+@use 'p-kodawari-sec02';
+
+@use 'p-initiatives-lead';
+
+@use 'p-initiatives-pr-area';
+@use 'p-initiatives-sec01';
+@use 'p-initiatives-sec02';
+@use 'p-initiatives-sec03';
+@use 'p-initiatives-sec04';
+@use 'p-initiatives-sec05';
+
+@use 'p-news-archive';
+
+@use 'p-news-single-mv';
+@use 'p-news-single-body';
+@use 'p-news-single-content';
+
+@use 'p-404-sec01';

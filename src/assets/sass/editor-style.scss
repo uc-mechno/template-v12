@@ -1,0 +1,81 @@
+@use 'global' as *;
+
+body {
+  font-family: $base-font-family-sans;
+  letter-spacing: $base-letter-spacing;
+  line-height: $base-line-height;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-font-family-serif;
+}
+
+p {
+  font-size: rem(14);
+  @include lh($base-line-height);
+}
+
+h1 {
+  font-size: rem(20);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+h2 {
+  font-size: rem(18);
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+h3 {
+  font-size: rem(16);
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+h4 {
+  font-size: rem(15);
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+h5 {
+  font-size: rem(14);
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+h6 {
+  font-size: rem(13);
+  line-height: $line-height-sm;
+  @include lh($line-height-sm);
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+figure,
+.wp-block-buttons,
+details,
+.wp-block-verse,
+.wp-block-file,
+.wp-block-media-text {
+  margin-top: rem(40);
+}
+
+a {
+  text-decoration: underline;
+  color: $color-accent-secondary;
+}

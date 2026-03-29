@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+/*
+## To Top
+-------------------------------------------------------------- */
+
+/* doc
+---
+title: to-top
+---
+
+```
+<div class="c-to-top">
+  <a href="#top"><span></span></a>
+</div>
+```
+*/
+
+.c-to-top {
+  right: 0;
+  top: 0;
+  height: max-content;
+  position: absolute;
+}
+
+.c-to-top a {
+  display: block;
+  width: rem(56);
+  height: rem(56);
+  background-color: $color-accent-secondary;
+  position: relative;
+}
+
+.c-to-top a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent $color-white transparent;
+}

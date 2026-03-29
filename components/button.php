@@ -1,0 +1,1 @@
+<a class="c-button c-button<?php echo esc_attr($args['state']); ?> c-button<?php echo esc_attr($args['size']); ?> <?php echo $args['br'] ? 'c-button--br' : ''; ?> <?php echo $args['icon'] ? 'c-button--icon' : ''; ?>" <?php echo $args['target'] ? 'target="_blank"' : ''; ?> href="<?php echo esc_url($args['link']); ?>"><?php echo kses_allowed_html($args['text']); ?></a>

@@ -1,0 +1,68 @@
+@use '../global' as *;
+
+// =================================================================
+// Base
+// =================================================================
+
+/* Base
+-------------------------------------------------------------- */
+html {
+  @include media(max, xxs) {
+    font-size: clamp(12px, vw(360, 16), 16px);
+  }
+
+  @include media(min, xxs) {
+    font-size: 16px;
+  }
+
+  @include media(min, md) {
+    font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - map-get($breakpoints, 'md')) / (strip-unit(map-get($breakpoints, 'lg')) - strip-unit(map-get($breakpoints, 'md'))))), 16px);
+  }
+
+  @include media(min, xl) {
+    font-size: 16px;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: $color-white;
+    background-color: $base-color-main;
+    font-family: $base-font-family-sans;
+    letter-spacing: $base-letter-spacing;
+    line-height: $base-line-height;
+
+    &.is-active {
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+
+  a[href^='tel:'] {
+    @include media(min, md) {
+      pointer-events: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+:focus {
+  outline: none;
+}
+:focus-visible {
+  border: 1px solid $base-color-accent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,8 @@
+# node_modulesを除外する
+node_modules/
+
+# distディレクトリを除外する
+# dist
+
+# .DS_Storeを除外する
+.DS_Store

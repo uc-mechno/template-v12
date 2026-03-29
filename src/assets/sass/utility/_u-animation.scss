@@ -1,0 +1,57 @@
+@use 'global/' as *;
+
+.u-iteration2 {
+  animation-iteration-count: 2;
+}
+
+.u-iteration-infinite {
+  animation-iteration-count: infinite;
+}
+
+.u-delay05 {
+  animation-delay: .5s;
+}
+
+.u-delay1 {
+  animation-delay: 1s;
+}
+
+.u-delay15 {
+  animation-delay: 1.5s;
+}
+
+.u-delay2 {
+  animation-delay: 2s;
+}
+
+.u--delay25 {
+  animation-delay: 2.5s;
+}
+
+.u-delay3 {
+  animation-delay: 3s;
+}
+
+.u-duration05 {
+  animation-duration: .5s;
+}
+
+.u-duration1 {
+  animation-duration: 1s;
+}
+
+.u-duration15 {
+  animation-duration: 1.5s;
+}
+
+.u-duration2 {
+  animation-duration: 2s;
+}
+
+.u-duration25 {
+  animation-duration: 2.5s;
+}
+
+.u-duration3 {
+  animation-duration: 3s;
+}

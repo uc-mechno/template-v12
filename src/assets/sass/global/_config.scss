@@ -1,0 +1,1145 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:color';
+
+// ==========================================================================
+// Config
+// ==========================================================================
+// object/utilityレイヤーにimportantをすべて指定する場合は、
+// trueを、指定しない場合はfalseを指定します。
+$utility-important: false;
+$important: !important;
+
+@if $utility-important == true {
+  $important: !important;
+} @else {
+  $important: null;
+}
+
+// ==========================================================================
+// Variable
+// ==========================================================================
+// ==========================================================================
+// 命名規則
+// ==========================================================================
+// $[element-or-namespace-][property-name][-variant-name][-breakpoint]
+// $[element-or-namespace-]: 指定する要素の名前。全体で使う場合は`global-`、カラーパレットは`color-`。
+// [property-name]: プロパティ値（省略不可）。プロパティ値で表現できない場合は用途を端的に表した名前。
+// [-variant-name]: 状態変化やバリエーションの名前。
+// [-breakpoint]: ブレイクポイントのキー。
+
+// 色の明るい色と暗い色はこちらを使用
+// https://www.peko-step.com/tool/colightness.html
+
+// Color
+// ==========================================================================
+// --- color ---
+$color-black: #000;
+$color-white: #fff;
+$color-blue: #33f;
+$color-sky-blue: #12a4ff;
+$color-red: #c90926;
+$color-pink: #c71a63;
+$color-yellow: #f2edca;
+$color-green: #417967;
+
+// --- color brands---
+$color-twitter: #1da1f2;
+$color-facebook: #3c5a99;
+$color-line: #00b900;
+$color-googlePlus: #dd5144;
+$color-youtube: #da1725;
+$color-instagram: #da1725;
+
+// --- color accent ---
+$color-accent-primary: #bb2000;
+$color-accent-secondary: #8e5b06;
+$color-accent-danger: red;
+$color-accent-warning: #f5ba4e;
+$color-accent-info: #4a90b9;
+$color-accent-important: #d51313;
+
+// --- color base ---
+$color-base-primary: #ffffff;
+$color-base-secondary: #f5f2ef;
+
+// --- color gray ---
+$color-gray-darkest: #191919;
+$color-gray-darker: #333;
+$color-gray-dark: #797979;
+$color-gray: #a3a3a3;
+$color-gray-light: #d1d1d1;
+$color-gray-lighter: #eee;
+$color-gray-lightest: #f9f9f9;
+
+// --- color main base ---
+$color-main-primary-darkest: #000000;
+$color-main-primary-darker: #000000;
+$color-main-primary-dark: #070303;
+$color-main-primary: #1c0c0c;
+$color-main-primary-light: #2a1212;
+$color-main-primary-lighter: #3c1a1a;
+$color-main-primary-lightest: #4e2121;
+
+// --- color sub base ---
+$color-sub-primary-darkest: #000000;
+$color-sub-primary-darker: #080401;
+$color-sub-primary-dark: #1d0f06;
+$color-sub-primary: #331c0b;
+$color-sub-primary-light: #47260f;
+$color-sub-primary-lighter: #5c3214;
+$color-sub-primary-lightest: #703d18;
+
+// --- color base ---
+$base-color-base: $color-base-primary;
+$base-color-sub: $color-sub-primary;
+$base-color-main: $color-main-primary;
+$base-color-accent: $color-accent-primary;
+
+// Link
+// ==========================================================================
+$color-link: #292f89;
+$color-hover: adjust-color($color-link, $alpha: -0.4);
+$color-active: adjust-color($color-link, $alpha: -0.4);
+$color-focus-outline: adjust-color($color-link, $alpha: -0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $color-focus-outline;
+$focus-outline-offset: 2px;
+
+// Typography
+// ==========================================================================
+// --- font-weight ---
+$font-weight-thin: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-black: 900 !default;
+
+// --- font-size ---
+$font-size-none: 0.625rem !default;
+$font-size-xs: 0.75rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.125rem !default;
+$font-size-xl: 1.25rem !default;
+
+// --- line-height ---
+$line-height-none: 1 !default;
+$line-height-sm: 1.4 !default;
+$line-height-md: 1.6 !default;
+$line-height-lg: 1.75 !default;
+$line-height-xl: 2 !default;
+
+// --- letter-spacing ---
+$letter-spacing-none: 0 !default;
+$letter-spacing-sm: 0.025em !default;
+$letter-spacing-md: 0.05em !default;
+$letter-spacing-lg: 0.075em !default;
+$letter-spacing-xl: 0.1em !default;
+$letter-spacing-xxl: 0.2em !default;
+
+// --- base-font ---
+$base-font-size-pc: $font-size-md;
+$base-font-size-sp: $font-size-sm;
+$base-font-weight: $font-weight-normal;
+$base-line-height: $line-height-md;
+$base-letter-spacing: $letter-spacing-md;
+$base-font-family-sans: 'Noto Sans JP', sans-serif;
+$base-font-family-serif: 'Noto Serif JP', serif;
+$base-font-family-serif-Vt: 'Noto Serif JP Vertical', serif;
+
+// Layout
+// ==========================================================================
+// --- width ---
+$layout-width-canvas: 1440px;
+$layout-width-inner: 1024px;
+$layout-width-inner-min: 992px;
+$layout-width-tab: 768px;
+$layout-width-single: 686px;
+$layout-width-sp: 360px;
+
+// --- padding ---
+$padding-pc: 32px;
+$padding-sp: 16px;
+
+// --- gap ---
+$base-gap-pc: 8px;
+$base-gap-sp: 8px;
+
+// --- gap ---
+$base-spacing-pc: 20px;
+$base-spacing-sp: 20px;
+
+// --- gutter ---
+$gutter-pc: 10px;
+$gutter-sp: 25px;
+
+// --- col ---
+$col-num: 12;
+$col-width: 70px;
+
+// --- header-height ---
+$header-height-pc: 105px;
+$header-height-sp: 80px;
+
+// --- header-width ---
+$header-width: 1600px;
+
+// --- top-mv-height ---
+$top-mv-height-pc: 606px;
+
+// Dividers
+// ==========================================================================
+$dividers: #231815;
+$dividers-dark: darken($dividers, 10%);
+$dividers-light: rgba($dividers, 0.2);
+
+// Radius
+// ==========================================================================
+$base-radius: 6px !default;
+
+// Border
+// ==========================================================================
+$base-border-width: 2px !default;
+$base-border-color: $color-accent-secondary !default;
+
+// Easing
+// ==========================================================================
+$ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+$linear: cubic-bezier(0, 0, 1, 1);
+$easeIn: cubic-bezier(0.42, 0, 1, 1);
+$easeOut: cubic-bezier(0, 0, 0.58, 1);
+$easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
+
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// `transition-timing-function`と`animation-timing-function`プロパティに指定する、
+// cubic-bezier() 関数記法で定義した、3次ベジェ曲線のタイミング関数です。
+// 実際の動きは、以下のサイトで確認できます。
+// https://matthewlein.com/ceaser/
+// easeは「ゆっくりと」、inは「始まる」、outは「終わる」に置き換えると想像しやすいです。
+// IE9は`cubic-bezier()`に対応していないので、フォールバックを指定してください。
+
+// linear：一定の速度で変化する
+$linear: cubic-bezier(0.25, 0.25, 0.75, 0.75) !default;
+
+// ease：開始時から急速に加速して、中盤から緩やかになる
+$ease: cubic-bezier(0.25, 0.1, 0.25, 1) !default;
+
+// ease-in：緩やかに始まり、次第に加速し、突然停止する
+$ease-in: cubic-bezier(0.42, 0, 1, 1) !default;
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22) !default;
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715) !default;
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035) !default;
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335) !default;
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045) !default;
+
+// ease-out：急速に始まり、次第に緩やかになっていく
+$ease-out: cubic-bezier(0, 0, 0.58, 1) !default;
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94) !default;
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1) !default;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1) !default;
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1) !default;
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
+
+// ease-in-out：緩やかに始まり、加速が緩やかになっていく
+$ease-in-out: cubic-bezier(0.42, 0, 0.58, 1) !default;
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955) !default;
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1) !default;
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1) !default;
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86) !default;
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
+
+// Animations
+// ==========================================================================
+$base-opacity: 0.7 !default;
+$base-duration: 0.5s !default;
+$base-timing: $ease !default;
+
+// Path
+// ==========================================================================
+$pathImages: '../images';
+
+// Breakpoint
+// ==========================================================================
+$breakpoints: (
+  'xxs': 360px,
+  'xs': 480px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1440px,
+) !default;
+
+// --- bootstrap ---
+// $breakpoints: (
+//   "xs": 375px,
+//   "sm": 576px,
+//   "md": 768px,
+//   "lg": 992px,
+//   "xl": 1200px,
+// ) !default;
+
+// --- tailwind css ---
+// $breakpoints: (
+//   "xs": 480px,
+//   "sm": 640px,
+//   "md": 768px,
+//   "lg": 1024px,
+//   "xl": 1280px,
+// ) !default;
+
+// Layer
+// ==========================================================================
+$layer: (
+  splash: 150,
+  modal: 100,
+  drawer: 50,
+  floating: 40,
+  gnav: 30,
+  header-logo: 30,
+  header-gradient: 26,
+  header-bg: 25,
+  header: 20,
+  title: 10,
+  default: 1,
+  initial: 0,
+  decoration: -1,
+) !default;
+
+// ==========================================================================
+//  Mixin
+// ==========================================================================
+
+// Media
+// ==========================================================================
+// @desc - メディアクエリを挿入します。
+// @param {String} $textype - 第一引数に変数のキーワードを渡します。
+// @param {String} $bp1 - 第二引数に変数のキーワードを渡します。
+// @param {String} $bp2 - 第三引数に変数のキーワードを渡します。
+// @see - $breakpoint
+// @example scss - Usage
+// .hoge {
+//   margin: 1px;
+//   @include media(min,md) {
+//     margin: 1px;
+//   }
+// }
+// .fuga {
+//   @include media(max,md) {
+//     padding: 1px;
+//   }
+// }
+// .hoge-fuga {
+//   @include media(between, md , lg) {
+//     padding: 1px;
+//   }
+// }
+// @example css - CSS output
+// @media screen and (min-width: 768px) {
+//   .hoge {
+//     margin: 1px;
+//   }
+// }
+// @media screen and (max-width: 767.98px) {
+//   .fuga {
+//     padding: 1px;
+//   }
+// }
+// @media screen and (min-width: 768px) and (max-width: 931.98px) {
+//   .hoge-fuga {
+//     padding: 1px;
+//   }
+// }
+@mixin media($textype, $bp1, $bp2: 0) {
+  @if ($textype == min) {
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}), print {
+      @content;
+    }
+  } @else if ($textype == max) {
+    @media screen and (max-width: #{map-get($breakpoints, $bp1) - .02px }) {
+      @content;
+    }
+  } @else if ($textype == between) {
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}), print and (max-width: #{map-get($breakpoints, $bp2) - .02px }) {
+      @content;
+    }
+  } @else {
+    @error "引数が間違っています。" + "正しい引数を設定してください。";
+  }
+}
+
+//
+//  @mixin container-query
+//
+//  @description
+//  コンテナクエリーを作成するためのmixinです。
+//  @link https://zenn.dev/moneyforward/articles/css-container-query
+//
+//  @param {string} $name - セレクタ名
+//  @param {number} $width - 幅
+//  @param {string} [$rule=max-width] - ルール（max-widthまたはmin-width）
+//
+//  @example - scss
+// .container-query {
+//  @include container-query(my-container,md){
+//     max-width: 10px;
+//  }
+// }
+//
+//  @example - scss
+//  @container my-container (max-width: 768px) {
+//   .container-query {
+//     max-width: 10px;
+//   }
+// }
+//
+
+@mixin container-query($name, $bp1, $rule: max-width) {
+  @if $rule == max-width {
+    @container #{$name} (max-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if $rule == min-width {
+    @container #{$name} (min-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  }
+}
+
+// Hover
+// ==========================================================================
+// @desc - メディアクエリのhoverを挿入します。
+// @example scss - Usage
+// .foo {
+//   color: red;
+//   @include mq(tab) {
+//     color: blue;
+//   }
+// }
+// @example css - CSS output
+// .foo {
+//   color: red;
+// }
+// @media screen and (min-width: 768px) {
+//   .foo {
+//     color: blue;
+//   }
+// }
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// このような書き方もある
+// @mixin hv($flag: true) {
+
+//   &:hover {
+//     transition: all .2s linear;
+
+//     @if $flag == true {
+//       opacity: .8;
+//     }
+//     @content;
+//   }
+// }
+
+///
+/// hover-styleミックスイン
+///
+/// ホバー時に指定されたコンテンツを適用します。
+///
+/// @param {boolean} [$disabled=false] - デフォルトはfalse。trueの場合、ホバーが無効化されます。
+///
+@mixin hover-style($disabled: false) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+  @if $disabled {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+///
+/// focus-styleミックスイン
+///
+/// フォーカス時に指定されたコンテンツを適用します。
+///
+/// @example SCSS
+///   .my-element {
+///     @include focus-style {
+///       outline: 2px solid blue;
+///     }
+///   }
+///
+/// @example CSS
+///   .my-element:focus {
+///     outline: 2px solid blue;
+///   }
+///
+@mixin focus-style {
+  &:focus {
+    @content;
+  }
+}
+
+/// Focus-ring
+/// ==========================================================================
+/// @desc - focus-ringを挿入します。
+/// @link https://www.tam-tam.co.jp/tipsnote/html_css/post16551.html
+/// @link https://qiita.com/xrxoxcxox/items/82e083b3f47309873262
+/// @link https://yuheiy.hatenablog.com/entry/2017/08/28/185913
+/// @example scss - Usage
+/// .foo {
+///   color: red;
+///   @include mq(tab) {
+///     color: blue;
+///   }
+/// }
+/// @example css - CSS output
+/// .foo {
+///   color: red;
+/// }
+/// @media screen and (min-width: 768px) {
+///   .foo {
+///     color: blue;
+///   }
+/// }
+// @mixin focus-with-keyboard {
+//   html[data-whatinput='keyboard'] &:focus {
+//     @content;
+//   }
+// }
+
+// @mixin focus-without-keyboard {
+//   html[data-whatinput='initial'] &:focus,
+//   html[data-whatinput='mouse'] &:focus,
+//   html[data-whatinput='touch'] &:focus {
+//     @content;
+//   }
+// }
+
+// @mixin focus-clear {
+//   outline: none;
+// }
+
+// @mixin focus-clear-without-keyboard {
+//   @include focus-without-keyboard {
+//     @include focus-clear;
+//   }
+// }
+
+// Clearfix
+// ==========================================================================
+// @desc - クリアーフィックスのスタイルを挿入します。
+// @param {Bool, String} - 引数$importantに"important"を渡すと`!important`の指定ができます。
+// @example scss - Usage
+//
+// .foo { @include clearfix; }
+// .bar { @include clearfix(important); }
+//
+// @example css - CSS output
+// .foo:after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
+// .bar:after {
+//   content: "" !important;
+//   display: block !important;
+//   clear: both !important;
+// }
+@mixin clearfix($important: false) {
+  @if ($important == 'important') {
+    $important: unquote('!important');
+  } @else {
+    $important: null;
+  }
+  &::after {
+    content: '' $important;
+    display: block $important;
+    clear: both $important;
+  }
+
+  &::before {
+    content: '' $important;
+    display: block $important;
+    clear: both $important;
+  }
+
+  display: block $important;
+}
+
+// Font-face
+// ==========================================================================
+// @desc - ダウンロードしたWebフォントをインポートします。
+// @see https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6#file-_mixins-scss
+// @param {String} $name - font-family名（クオーテーション推奨）
+// @param {String} $path - フォントファイルへの相対パス（クオーテーション推奨）
+// @param {String} $weight [null] - font-weight
+// @param {String} $style [null] - font-style
+// @param {String} $display [null] - font-display
+// @param {String} $exts [eot woff2 woff ttf svg] - 対応するフォントファイルの拡張子
+// @example scss - Usage
+// @include font-face("Open Sans", "font/OpenSans-Regular", 400, normal, woff ttf);
+//
+// @example css - CSS output
+// @font-face {
+//   font-display: swap;
+//   font-family: "Open Sans";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("font/OpenSans-Regular.woff") format("woff"), url("font/OpenSans-Regular.ttf") format("truetype");
+// }
+@mixin font-face($name, $path, $weight: null, $style: null, $display: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_'),
+  );
+
+  $formats: (
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    src: $src;
+    font-display: $display;
+  }
+}
+
+// Full-bg
+// ==========================================================================
+// @desc  背景色だけをブラウザの横幅いっぱいに表示します。コンテンツは親コンテナに収まります。
+// @example scss - Usage
+// .full-width {
+//   @include full-bg();
+//   background-color: #eee;
+// }
+// @example css - CSS output
+// .full-bg {
+//   margin-right: calc(-50vw + 50%);
+//   margin-left: calc(-50vw + 50%);
+//   padding-right: calc(50vw - 50%);
+//   padding-left: calc(50vw - 50%);
+//   background-color: #eee;
+// }
+@mixin full-bg() {
+  margin-right: calc(-50vw + 50%);
+  margin-left: calc(-50vw + 50%);
+  padding-right: calc(50vw - 50%);
+  padding-left: calc(50vw - 50%);
+}
+
+// Full-width
+// ==========================================================================
+// @desc  ブラウザの横幅いっぱいに表示します。
+// @example scss - Usage
+// .full-width {
+//   @include full-width();
+// }
+// @example css - CSS output
+// .full-width {
+//   margin-right: calc(-50vw + 50%);
+//   margin-left: calc(-50vw + 50%);
+// }
+@mixin full-width() {
+  margin-right: calc(-50vw + 50%);
+  margin-left: calc(-50vw + 50%);
+}
+
+// Margin-auto
+// ==========================================================================
+// @desc  ブラウザの横幅いっぱいに表示します。
+// @example scss - Usage
+// .margin-auto {
+//   @include margin-auto();
+// }
+// @example css - CSS output
+// .margin-auto {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Visually-hidden
+// ==========================================================================
+// @desc  ブラウザの横幅いっぱいに表示します。
+// @example scss - Usage
+// .visually-hidden {
+//   @include visually-hidden();
+// }
+// @example css - CSS output
+// .visually-hidden {
+//   clip: rect(0 0 0 0) !important;
+//   -webkit-clip-path: inset(50%) !important;
+//   border: 0 !important;
+//   clip-path: inset(50%) !important;
+//   height: 1px !important;
+//   margin: -1px !important;
+//   overflow: hidden !important;
+//   padding: 0 !important;
+//   position: absolute !important;
+//   white-space: nowrap !important;
+//   width: 1px !important;
+// }
+@mixin visually-hidden() {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+// ラインハイトの上下の余白を相殺
+// Lh
+// ==========================================================================
+// @desc - ラインハイトの上下の余白を相殺。
+// @link https://moshashugyo.com/media/line-height-space
+// @param    {Number} $line-height - ラインハイトの値。
+// @example scss - Usage
+// .lh {
+//   @include lh(2);
+// }
+// @example css - CSS output
+// .lh::before, .lh::after {
+//   content: "";
+//   display: block;
+//   height: 0;
+//   width: 0;
+// }
+// .lh::before {
+//   margin-top: calc((1 - 2) * 0.5em);
+// }
+// .lh::after {
+//   margin-bottom: calc((1 - 2) * 0.5em);
+// }
+@mixin lh($line-height) {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+  &::after {
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+// ==========================================================================
+//  Function
+// ==========================================================================
+
+// Strip-unit
+// ==========================================================================
+// @desc 単位を外す
+// @function strip-unit
+// @param    {Number} $number number to strip unit
+// @return   {Number} unitless number
+// @example
+//  strip-unit(-16px)        => -16
+//  strip-unit(0.5em)        => 0.5
+//  strip-unit(0.5cm + 10mm) => 1.5
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+// Divide-root
+// ==========================================================================
+// @desc - ルートのサイズを返す。
+// @param {Number} $px - 指定するピクセル値。
+// @see - $base-font-size-pc
+// @example - divide-root(20) => 1.25
+@function divide-root($px, $parent: 16) {
+  @return math.div(strip-unit($px), strip-unit($parent));
+}
+
+// Em
+// ==========================================================================
+// @desc - pxをemに変換します。
+// @param {Number} $px - 指定するピクセル値。
+// @param {Number} $parent [16] - 親要素のピクセル値。
+// @example - em(20) => 1.25em
+// @example - em(20, 15) => 1.33333em
+@function em($px, $parent: 16) {
+  @return math.div(strip-unit($px), strip-unit($parent)) * 1em;
+}
+
+// Px
+// ==========================================================================
+// @desc - emをpxに変換します。
+// @param {Number} $em - 指定するem値。
+// @param {Number} $parent [16] - 親要素のピクセル値。
+// @example - px(0.8) => 12.8px
+// @example - px(0.8, 15) => 12px
+@function px($em, $parent: 16) {
+  @return (strip-unit($em) * strip-unit($parent)) * 1px;
+}
+
+// Rem
+// ==========================================================================
+// @desc - pxをremに変換します。
+// @param {Number} $px - 指定するピクセル値。
+// @param {Number} $parent [16] - 親要素のピクセル値。
+// @example - rem(20) => 1.25rem
+// @example - rem(20, 15) => 1.33333rem
+@function rem($px, $parent: 16) {
+  @return math.div(strip-unit($px), strip-unit($parent)) * 1rem;
+}
+
+// Vw
+// ==========================================================================
+// @desc - pxをvwに変換します。
+// @param {Number} $window_width  - ウィンドウの幅。
+// @param {Number} $parent [16] - 親要素のピクセル値。
+// @example - rem(24) => 3.125vw
+// @example - rem(768, 24) => 4.2666666667vw
+@function vw($window_width: 768, $parent: 16) {
+  @return math.div(strip-unit($parent), strip-unit($window_width)) * 100vw;
+}
+
+// Fs
+// ==========================================================================
+// @desc - pxを%もしくはvwに変換します。
+// @param {Number} $size - 指定する画面幅。
+// @param {Number} $context - 指定するのピクセル値。
+// @param {String} $unit - 指定する単位。
+// @example - fs(10, 768, "%") => 1.3020833333%
+// @example - fs(10, 768, "vw") => 1.3020833333vw
+// @example - fs(10, 20, "em") => 0.5em
+@function fs($size, $context: 768, $unit: em) {
+  @if $unit == '%' {
+    @return #{math.div(strip-unit($size), strip-unit($context)) * 100}#{$unit};
+  } @else if $unit == 'vw' {
+    @return #{math.div(strip-unit($size), strip-unit($context)) * 100}#{$unit};
+  } @else {
+    @return #{math.div(strip-unit($size), strip-unit($context))}#{$unit};
+  }
+}
+
+// Z-index
+// ==========================================================================
+// @desc -z-indexを$layerから取り出す
+// @param {String} $z-index - してする文字列。
+// @example scss - Usage
+// .z-index {
+//   z-index: z-index(header);
+// }
+// @example css - CSS output
+// .z-index {
+//   z-index: 20;
+// }
+@function z-index($z-index) {
+  @return map-get($layer, $z-index);
+}
+
+// Breakpoints
+// ==========================================================================
+// @desc - デバイスサイズを$breakpointsから取り出す
+// @param {String} $size - 変数のキーワードを渡します。
+// @example scss - Usage
+// .breakpoints {
+//   margin: breakpoints(xs);
+// }
+// @example css - CSS output
+// .breakpoints {
+//   margin: 480px;
+// }
+@function bp($size) {
+  @return map-get($breakpoints, $size);
+}
+
+/// line-height
+/// ==========================================================================
+/// @desc -line-heightの計算
+/// @param {Number} $size - 指定する画面幅。
+/// @param {Number} $context - 指定するのピクセル値。
+/// @param {String} $unit - 指定する単位。
+/// @example - fs(10, 768, "%") => 1.3020833333%
+/// @example - fs(10, 768, "vw") => 1.3020833333vw
+/// @example - fs(10, 20, "em") => 0.5em
+@function l-height($height, $pixel) {
+  @return math.div($height, $pixel);
+}
+
+/// letter-spacing
+/// ==========================================================================
+/// @desc -letter-spacing計算
+/// @param {Number} $size - 指定する画面幅。
+/// @param {Number} $context - 指定するのピクセル値。
+/// @param {String} $unit - 指定する単位。
+/// @example - fs(10, 768, "%") => 1.3020833333%
+/// @example - fs(10, 768, "vw") => 1.3020833333vw
+/// @example - fs(10, 20, "em") => 0.5em
+@function l-spacing($spacing) {
+  @return math.div($spacing, 1000) * 1em;
+}
+
+// Calc-rem-container
+// ==========================================================================
+// @desc - border-boxで - containerの余白を含む計算(rem)
+// @param {Number $inner-width - 指定する画面幅
+// @param {Number $space - 指定するのピクセル値
+// @example scss - Usage
+// .calc-rem-container {
+//   width: calc-rem-container(10, 2);
+// }
+// @example css - CSS output
+// .calc-rem-container {
+//   width: 0.875rem;
+// }
+
+@function calc-rem-container($inner-width, $space) {
+  @return calc(rem($inner-width) + (rem($space) * 2));
+}
+
+// Fluid-size
+// ==========================================================================
+// @desc - clamp() で作る可変のフォントサイズ
+// @link https://firstlayout.net/fluidly-font-size-created-with-sass-and-clamp/
+// @link https://min-max-calculator.9elements.com/
+// @param {Number} $min-size - 引数に最小の値。
+// @param {Number} $max-size - 引数に最大の値。
+// @return clamp($min-unit, $calc-rem + $calc-vw, $max-unit)
+// @see - $breakpoint
+// @example scss - Usage
+// .fluid-size {
+//   font-size: fluid-size(24px, 60px);
+// }
+// px などの単位をはずしてもよい
+// .fluid-size {
+//   font-size: fluid-size(24, 60);
+// }
+// @example css - CSS output
+// .fluid-size {
+//   font-size: clamp(1.5rem, -0.2088607595rem + 5.6962025316vw, 3.75rem);
+// }
+@function fluid-size($min-size, $max-size, $size: 'lg') {
+  $min-unit: rem($min-size);
+  $max-unit: rem($max-size);
+  $min-num: divide-root($min-size);
+  $max-num: divide-root($max-size);
+  $min-breakpoint: divide-root(map.get($breakpoints, 'xxs'));
+  $max-breakpoint: if($size == 'xxl', divide-root(map.get($breakpoints, 'xxl')), if($size == 'xl', divide-root(map.get($breakpoints, 'xl')), if($size == 'md', divide-root(map.get($breakpoints, 'md')), divide-root(map.get($breakpoints, 'lg')))));
+  $slope: math.div(($max-num - $min-num), ($max-breakpoint - $min-breakpoint));
+  $calc-rem: ($min-breakpoint * -1 * $slope + $min-num) * 1rem;
+  $calc-vw: ($slope * 100) * 1vw;
+  @return clamp($min-unit, $calc-rem + $calc-vw, $max-unit);
+}
+
+// @function fsa($min-size, $max-size, $size: 'lg') {
+//   $min-unit: rem($min-size);
+//   $max-unit: rem($max-size);
+//   $min-num: divide-root($min-size);
+//   $max-num: divide-root($max-size);
+//   $min-breakpoint: divide-root(map.get($breakpoints, 'xxs'));
+//   $max-breakpoint: if($size == 'xxl', divide-root(map.get($breakpoints, 'xxl')), if($size == 'xl', divide-root(map.get($breakpoints, 'xl')), divide-root(map.get($breakpoints, 'lg'))));
+//   $slope: math.div(($max-num - $min-num), ($max-breakpoint - $min-breakpoint));
+//   $calc-rem: ($min-breakpoint * -1 * $slope + $min-num) * 1rem;
+//   $calc-vw: ($slope * 100) * 1vw;
+//   @return clamp($min-unit, $calc-rem + $calc-vw, $max-unit);
+// }
+
+///
+/// column-width関数
+///
+/// グリッドシステムのカラム幅を計算します。
+///
+/// @link https://github.com/DesignSupply/startify-styles/blob/main/scss/foundation/_function.scss
+///
+/// @param $columns - カラム数を指定します。デフォルトは12です。
+/// @param $gap - カラム間の余白を指定します。デフォルトは0です。
+///
+/// @example SCSS
+///   .my-element {
+///     width: column-width(4, 20px);
+///   }
+///
+/// @example CSS
+///   .my-element {
+///     width: calc(33.3333% - 10px);
+///   }
+///
+@function column-width($columns: 12, $gap: 0) {
+  $width: 100%;
+
+  // カラム数が1の場合
+  @if $columns == 1 {
+    @if $gap == 0 {
+      $width: 8.3333%;
+    } @else {
+      $width: calc(8.3333% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が2の場合
+  @else if $columns == 2 {
+    @if $gap == 0 {
+      $width: 16.6666%;
+    } @else {
+      $width: calc(16.6666% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が3の場合
+  @else if $columns == 3 {
+    @if $gap == 0 {
+      $width: 25%;
+    } @else {
+      $width: calc(25% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が4の場合
+  @else if $columns == 4 {
+    @if $gap == 0 {
+      $width: 33.3333%;
+    } @else {
+      $width: calc(33.3333% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が5の場合
+  @else if $columns == 5 {
+    @if $gap == 0 {
+      $width: 41.6666%;
+    } @else {
+      $width: calc(41.6666% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が6の場合
+  @else if $columns == 6 {
+    @if $gap == 0 {
+      $width: 50%;
+    } @else {
+      $width: calc(50% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が7の場合
+  @else if $columns == 7 {
+    @if $gap == 0 {
+      $width: 58.3333%;
+    } @else {
+      $width: calc(58.3333% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が8の場合
+  @else if $columns == 8 {
+    @if $gap == 0 {
+      $width: 66.6666%;
+    } @else {
+      $width: calc(66.6666% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が9の場合
+  @else if $columns == 9 {
+    @if $gap == 0 {
+      $width: 75%;
+    } @else {
+      $width: calc(75% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が10の場合
+  @else if $columns == 10 {
+    @if $gap == 0 {
+      $width: 83.3333%;
+    } @else {
+      $width: calc(83.3333% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が11の場合
+  @else if $columns == 11 {
+    @if $gap == 0 {
+      $width: 91.6666%;
+    } @else {
+      $width: calc(91.6666% - calc($gap / 2));
+    }
+  }
+
+  // カラム数が12の場合
+  @else if $columns == 12 {
+    $width: 100%;
+  }
+  @return $width;
+}
+
+@mixin gradient($direction, $color-1, $color-2) {
+  background-image: linear-gradient($direction, $color-1, $color-2);
+}

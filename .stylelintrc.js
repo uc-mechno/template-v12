@@ -1,0 +1,45 @@
+module.exports = {
+  plugins: ['stylelint-scss'],
+  extends: [
+    'stylelint-config-wordpress',
+    'stylelint-config-recommended-scss',
+    'stylelint-prettier/recommended',
+    // 'stylelint-config-recess-order',
+  ],
+  ignoreFiles: [
+    'node_modules/**',
+    'src/assets/sass/foundation/_reset.scss',
+    // 'dist/assets/css/**'
+  ],
+  rules: {
+    indentation: 2,
+    'number-leading-zero': 'never',
+    'color-hex-case': 'lower',
+    'color-hex-length': 'short',
+    'comment-whitespace-inside': 'always',
+    'color-named': null,
+    'no-descending-specificity': null,
+    'font-weight-notation': null,
+    'length-zero-no-unit': null,
+    'function-url-quotes': null,
+    'font-family-no-missing-generic-family-keyword': null,
+    'font-family-no-duplicate-names': null,
+    'font-family-name-quotes': null,
+    'no-duplicate-selectors': null,
+    'selector-class-pattern': null,
+    'declaration-block-no-duplicate-properties': null,
+    'selector-type-no-unknown': null,
+    'selector-id-pattern': null,
+    'value-keyword-case': null,
+    'function-name-case': null,
+    'declaration-block-no-shorthand-property-overrides': null,
+    'declaration-colon-space-after': null,
+    'max-line-length': [
+      300,
+      {
+        ignore: 'non-comments',
+        ignorePattern: ['/(https?://[0-9,a-z]*.*)|(^description\\:.+)|(^tags\\:.+)/i'],
+      },
+    ],
+  },
+};

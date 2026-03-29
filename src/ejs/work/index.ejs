@@ -1,0 +1,53 @@
+<%_ const path='../'; _%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- meta -->
+    <%- include(path + '_common/_head', { path:path,pageMeta:global.pageMeta['work'],}) %>
+  </head>
+  <body class="l-body">
+    <%- include(path + '_common/_header',{path:path,}) %>
+
+    <!-- main -->
+    <main class="l-body-main">
+
+      <!-- 下層ページのメインビュー -->
+      <%- include(path + '_component/_mv', {
+        path:path,
+        pageMeta:global.pageMeta['work'],
+        modifier:'--white'
+      }) %>
+
+      <!-- パンくず -->
+      <%- include(path + '_component/_breadcrumb', {
+        path:path,
+        pageMeta:global.pageMeta['work'],
+      }) %>
+
+      <section class="l-archive-works p-archive-works">
+        <div class="p-archive-works__inner l-inner">
+          <div class="p-archive-works__items">
+
+        <!-- ループ処理開始 -->
+        <%- include(path + '_component/_work-list', {
+          path:path,
+          pageMeta:global.pageMeta['work'],
+        }) %>
+        <!-- ループ終了 -->
+
+          </div>
+        </div>
+      </section>
+
+      <!-- cta -->
+      <%- include(path + '_component/_cta', {
+        path:path,
+        pageMeta:global.pageMeta['work'],
+      }) %>
+
+    </main>
+    <!-- /main -->
+
+    <%- include(path + '_common/_footer',{path:path,}) %>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+@use '../global/' as *;
+
+.u-fw-thin {
+  font-weight: $font-weight-thin $important;
+}
+
+.u-fw-light {
+  font-weight: $font-weight-light $important;
+}
+
+.u-fw-normal {
+  font-weight: $font-weight-normal $important;
+}
+
+.u-fw-medium {
+  font-weight: $font-weight-medium $important;
+}
+
+.u-fw-bold {
+  font-weight: $font-weight-bold $important;
+}
+
+.u-fw-black {
+  font-weight: $font-weight-black $important;
+}
+
+.u-fs-xs {
+  font-size: $font-size-xs $important;
+}
+
+.u-fs-sm {
+  font-size: $font-size-sm $important;
+}
+
+.u-fs-md {
+  font-size: $base-font-size-pc $important;
+}
+
+.u-fs-lg {
+  font-size: $font-size-lg $important;
+}
+
+.u-fs-xl {
+  font-size: $font-size-xl $important;
+}
+
+.u-fs-none {
+  font-size: $font-size-none $important;
+}
+
+.u-lh-sm {
+  line-height: $line-height-sm $important;
+}
+
+.u-lh-md {
+  line-height: $line-height-md $important;
+}
+
+.u-lh-lg {
+  line-height: $line-height-lg $important;
+}
+
+.u-lh-xl {
+  line-height: $line-height-xl $important;
+}
+
+.u-lh-none {
+  line-height: $line-height-none $important;
+}
+
+.u-ls-sm {
+  letter-spacing: $letter-spacing-sm $important;
+}
+
+.u-ls-md {
+  letter-spacing: $letter-spacing-md $important;
+}
+
+.u-ls-lg {
+  letter-spacing: $letter-spacing-lg $important;
+}
+
+.u-ls-xl {
+  letter-spacing: $letter-spacing-xl $important;
+}
+
+.u-ls-none {
+  letter-spacing: $letter-spacing-none $important;
+}
+
+.u-italic {
+  font-style: italic $important;
+}
+
+.u-underline {
+  text-decoration: underline $important;
+}
+
+.u-strike {
+  text-decoration: line-through $important;
+}
+
+.u-upper-case {
+  text-transform: uppercase $important;
+}
+
+.u-lower-case {
+  text-transform: lowercase $important;
+}
+
+.u-capital-case {
+  text-transform: capitalize $important;
+}
+
+.u-ff-sans {
+  font-family: $base-font-family-sans $important;
+}
+
+.u-ff-serif {
+  font-family: $base-font-family-serif $important;
+}
+
+.u-ff-serif-Vt {
+  font-family: $base-font-family-serif-Vt $important;
+}
